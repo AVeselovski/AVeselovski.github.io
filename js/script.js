@@ -13,7 +13,7 @@ $(window).scroll(function() {
     $('.parallax-element').css({
         'transform' : 'translate(0px, ' + wScroll / 2 + '%)'    
     });
-    if (wScroll > $('.parallax-element').offset().top - 50) {
+    if (wScroll > $('.parallax-element').offset().top) {
         $('.parallax-element').fadeOut(500, 'swing');
     }
 });
