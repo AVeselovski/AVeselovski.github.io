@@ -5,6 +5,16 @@ $(window).scroll(function() {
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
         $(".navbar-brand").removeClass("navbar-brand-reduce");
+        $('.parallax-element').fadeIn(1500, 'swing');
+    }
+    
+    var wScroll = $(this).scrollTop();
+    
+    $('.parallax-element').css({
+        'transform' : 'translate(0px, ' + wScroll / 2 + '%)'    
+    });
+    if (wScroll > $('.parallax-element').offset().top - 50) {
+        $('.parallax-element').fadeOut(500, 'swing');
     }
 });
 
