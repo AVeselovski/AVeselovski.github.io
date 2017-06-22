@@ -260,14 +260,14 @@ body {
     text-align: center;
     font-size: 200%;
     color: rgba(26, 26, 32, 1 );
-    background: rgba(239, 241, 237, 0.75);
+    background: rgba(239, 241, 237, 0.55);
     -webkit-transition: color .3s, background .5s;
     -moz-transition: color .3s, background .5s;
     -o-transition: color .3s, background .5s;
     transition: color .3s, background .5s;
 }
 .media-overlay-text-2:hover {
-    color: #01a0fb;
+    color: rgba(26, 26, 32, 1 );
     background: rgba(239, 241, 237, 0.55);
 }
 .media-container {
