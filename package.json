@@ -1,0 +1,20 @@
+{
+  "name": "my-portfolio-v2",
+  "version": "1.0.0",
+  "description": "My portfolio using React",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "Artur Veselovski",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scrollable-anchor": "^0.4.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^1.0.7"
+  }
+}

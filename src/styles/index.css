@@ -1,0 +1,132 @@
+/* Variables */
+/* Global */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");
+/* Define the "system" font family */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Segoe UI Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #828282;
+  background: -webkit-linear-gradient(#1a1a1a, #828282);
+  background: -moz-linear-gradient(#1a1a1a, #828282);
+  background: -o-linear-gradient(#1a1a1a, #828282);
+  background: linear-gradient(#1a1a1a, #828282);
+  color: #adadad;
+  min-height: 100vh; }
+
+/* Navbar */
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  width: 100%; }
+  .navbar a {
+    text-decoration: none;
+    color: #adadad;
+    stroke: #adadad;
+    transition: 0.3s; }
+    .navbar a:hover {
+      color: #e6e6e6;
+      stroke: #e6e6e6; }
+  .navbar .open-slide {
+    float: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    transition: 0.3s; }
+  .navbar .navbar-nav {
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 18px;
+    margin-top: 30px; }
+  .navbar .bullets {
+    font-size: 12px; }
+
+.side-nav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 30px;
+  background-color: rgba(26, 26, 26, 0.75);
+  transition: 0.3s; }
+  .side-nav ul {
+    margin-top: 70px;
+    font-size: 18px; }
+    .side-nav ul a {
+      margin: 0px 0px 30px 30px;
+      display: block;
+      text-decoration: none; }
+      .side-nav ul a:hover {
+        padding-left: 10px; }
+  .side-nav a {
+    color: #adadad;
+    transition: 0.3s;
+    stroke: #adadad; }
+    .side-nav a:hover {
+      color: #e6e6e6;
+      stroke: #e6e6e6; }
+  .side-nav .btn-close {
+    position: absolute;
+    top: 30px;
+    right: 30px; }
+
+/* Landing */
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .landing .ghost-div {
+    height: 10vh; }
+  .landing .title-holder {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    text-align: center;
+    border: solid 2px #adadad;
+    padding: 20px 30px 25px 30px; }
+    .landing .title-holder h1 {
+      font-size: 32px;
+      font-weight: 300; }
+    .landing .title-holder h2 {
+      font-size: 20px;
+      font-weight: 300; }
+  .landing .landing-nav {
+    display: block;
+    text-align: center;
+    list-style: none;
+    width: 100px;
+    margin: 0 auto; }
+    .landing .landing-nav a {
+      text-decoration: none;
+      color: #adadad;
+      font-size: 18px;
+      transition: 0.3s; }
+      .landing .landing-nav a:hover {
+        color: #e6e6e6; }
+    .landing .landing-nav .bullets {
+      display: block;
+      margin: 20px 0 20px 0;
+      font-size: 12px; }
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+/*# sourceMappingURL=index.css.map */
