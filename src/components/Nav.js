@@ -1,7 +1,7 @@
 // libs
-var React = require('react');
+import React from 'react';
 
-class Nav extends React.Component {
+export default class Nav extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -58,7 +58,7 @@ class Nav extends React.Component {
                         </a>
                     </span>
                     <ul className="navbar-nav">
-                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#page-top">Portfolio</a></li>
                         <li><a href="#" className="bullets">&bull; &bull; &bull;</a></li>
                         <li><a href="#" className="bullets">&bull; &bull;</a></li>
                         <li><a href="#" className="bullets">&bull;</a></li>
@@ -73,13 +73,11 @@ class Nav extends React.Component {
                     </a>
                     <ul>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">CV</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#cv">CV</a></li>
                     </ul>
                 </div>
             </div>
         );
     }
 }
-
-module.exports = Nav;

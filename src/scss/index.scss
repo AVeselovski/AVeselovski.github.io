@@ -1,0 +1,17 @@
+// ======================================
+//  index
+// ======================================
+
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/font';
+@import 'partials/global';
+@import 'partials/nav';
+@import 'partials/landing';
+@import 'partials/about';
+@import 'partials/projects';
+@import 'partials/cv';
+
+.is-current {
+    color: red;
+}

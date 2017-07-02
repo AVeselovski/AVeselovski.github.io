@@ -1,0 +1,81 @@
+// ======================================
+//  nav
+// ======================================
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    a {
+        text-decoration: none;
+        color: $primary-light;
+        stroke: $primary-light;
+        transition: 0.4s;
+        &:hover {
+            color: $primary-light-accent;
+            stroke: $primary-light-accent;
+        }
+    }
+    .open-slide {
+        cursor: pointer;
+        float: left;
+        margin-top: 30px;
+        margin-left: 30px;
+        transition: 0.4s;
+    }
+    .navbar-nav {
+        display: block;
+        width: 100px;
+        text-align: center;
+        margin: 0 auto;
+        list-style: none;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    .bullets {
+        font-size: 12px;
+    }
+}
+
+.side-nav {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 30px;
+    background-color: rgba(26, 26, 26, 0.75);
+    transition: 0.4s;
+    ul {
+        margin-top: 70px;
+        font-size: 18px;
+        a {
+            margin: 0px 0px 30px 30px;
+            display: block;
+            text-decoration: none;
+            &:hover {
+                padding-left: 10px;
+            }
+            &:active, 
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+    a {
+        color: $primary-light;
+        transition: 0.4s;
+        stroke: $primary-light;
+        &:hover {
+            color: $primary-light-accent;
+            stroke: $primary-light-accent;
+        }
+    }
+    .btn-close {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
