@@ -4,4 +4,71 @@
 
 .about {
     @include basic-layout;
+    .container {
+        max-width: 860px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-container-1 {
+    overflow: hidden;
+    padding-bottom: 20px;
+    img {
+        // float: right;
+        display: block; 
+        margin-left: auto; //
+        margin-right: auto; //
+        margin-bottom: 35px; //
+        border-radius: 50%; // ?
+        border: 2px solid $primary-light; // ?
+        width: 190px;
+        @media (min-width: 960px) {
+            float: right;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+    .basic-info {
+        float: left;
+        max-width: 860px;
+        @media (min-width: 960px) {
+            max-width: 590px; 
+        }
+    }
+    h2 {
+        font-size: $font-size-1;
+        font-weight: 300;
+        margin-bottom: 30px;
+        text-align: center;
+        @media (min-width: 960px) {
+            text-align: center;
+        }
+    }
+    p {
+        line-height: 135%;
+        font-size: $font-size-3;
+        @media (min-width: 960px) {
+            line-height: 125%;
+            font-size: $font-size-2;
+        }
+    }
+}
+.info-container-2 {
+    clear:both;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: $font-size-3;
+    line-height: 135%;
+}
+.info-container-3 {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 70px;
+    .devicons {
+        margin-bottom: 10px;
+    }
 }

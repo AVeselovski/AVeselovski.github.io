@@ -16,11 +16,11 @@
         border: solid 2px $primary-light;
         padding: 20px 30px 25px 30px;
         h1 {
-            font-size: 36px;
+            font-size: $font-size-1;
             font-weight: 300;
         }
         h2 {
-            font-size: 23px;
+            font-size: $font-size-2;
             font-weight: 300;
         }
     }
@@ -33,7 +33,7 @@
         a {
             text-decoration: none;
             color: $primary-light;
-            font-size: 18px;
+            font-size: $font-size-3;
             transition: 0.4s;
             &:hover {
                 color: $primary-light-accent;
@@ -42,7 +42,7 @@
         .bullets {
             display: block;
             margin: 20px 0 20px 0;
-            font-size: 12px;
+            font-size: $font-size-small;
         }
     }
 }
