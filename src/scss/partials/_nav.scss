@@ -10,7 +10,7 @@
         text-decoration: none;
         color: $primary-light;
         stroke: $primary-light;
-        transition: 0.4s;
+        transition: 0.4s ease-in-out;
         &:hover {
             color: $primary-light-accent;
             stroke: $primary-light-accent;
@@ -21,7 +21,7 @@
         float: left;
         margin-top: 30px;
         margin-left: 30px;
-        transition: 0.4s;
+        transition: 0.4s ease-in-out;
     }
     .navbar-nav {
         display: none;
@@ -46,7 +46,7 @@
     overflow-x: hidden;
     padding-top: 30px;
     background-color: rgba(26, 26, 26, 0.75);
-    transition: 0.4s;
+    transition: 0.4s ease-in-out;
     ul {
         margin-top: 70px;
         font-size: $font-size-3;
@@ -65,7 +65,7 @@
     }
     a {
         color: $primary-light;
-        transition: 0.4s;
+        transition: 0.4s ease-in-out;
         stroke: $primary-light;
         &:hover {
             color: $primary-light-accent;

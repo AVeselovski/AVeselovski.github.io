@@ -4,4 +4,39 @@
 
 .cv {
     @include basic-layout;
+    .container {
+        max-width: 1260px;
+        display: flex;
+        flex-direction: row;
+        
+        justify-content: space-between;
+        border: solid 1px red;
+        @media (min-width: 1060px) {
+
+        }
+    }
+
+    .cv-container-1 {
+        max-width: 50%;
+        // flex-grow: 1;
+        border: solid 1px blue;
+    }
+    .cv-container-2 {
+        max-width: 50%;
+        // flex-shrink: 1;
+        border: solid 1px blue;
+    }
+
+    .skill-table {
+        max-width: 440px;
+        border: solid 1px green;
+    }
+    .language-table {
+        // max-width: 440px;
+        border: solid 1px green;
+    }
+    .experience-table {
+        // max-width: 560px;
+        border: solid 1px green;
+    }
 }
