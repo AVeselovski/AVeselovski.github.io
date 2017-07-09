@@ -6,10 +6,7 @@
     @include basic-layout;
     .container {
         max-width: 1260px;
-        display: flex;
-        flex-direction: row;
         
-        justify-content: space-between;
         border: solid 1px red;
         @media (min-width: 1060px) {
 
@@ -17,24 +14,54 @@
     }
 
     .cv-container-1 {
-        max-width: 50%;
-        // flex-grow: 1;
+		width: 100%;
+        
         border: solid 1px blue;
     }
     .cv-container-2 {
-        max-width: 50%;
-        // flex-shrink: 1;
+		width: 100%;
+        
         border: solid 1px blue;
     }
 
     .skill-table {
-        max-width: 440px;
+        // max-width: 440px;
         border: solid 1px green;
+		tbody {
+			tr {
+				padding: 40px;
+				td:first-child {
+					width: 10px;
+				}
+			}
+			tr:first-child {
+				td:first-child {
+					color: limegreen;
+				}
+			}
+			tr:nth-child(2) {
+				td:first-child {
+					color: yellow;
+				}
+			}
+			tr:nth-child(3) {
+				td:first-child {
+					color: red;
+				}
+			}
+		}
     }
+	.table-title-bullets {
+		line-height: 10px;
+		
+	}
     .language-table {
         // max-width: 440px;
         border: solid 1px green;
     }
+	.education-table {
+		border: solid 1px green;
+	}
     .experience-table {
         // max-width: 560px;
         border: solid 1px green;

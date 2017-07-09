@@ -10,15 +10,16 @@ export default class CV extends React.Component {
                         <table className="skill-table">
                             <tbody>
                                 <tr>
-                                    <td className="table-title">&bull; &bull; &bull;</td>
+                                    <td className="table-title-bullets">&bull; &bull; &bull;</td>
                                     <td>HTML5, CSS3, JavaScript, JQuery, Sass, Bootstrap, Git</td>
                                 </tr>
+								<tr></tr>
                                 <tr>
-                                    <td className="table-title">&bull; &bull;</td>
+                                    <td className="table-title-bullets">&bull; &bull;</td>
                                     <td>NodeJS, ReactJS, PHP, C++, C#, MongoDB, MaterialUI, Linux, Jekyll, Pug/Jade</td>
                                 </tr>
                                 <tr>
-                                    <td className="table-title">&bull;</td>
+                                    <td className="table-title-bullets">&bull;</td>
                                     <td>MySQL, Apache2, Adobe Photoshop, Adobe Illustrator</td>
                                 </tr>
                             </tbody>
@@ -41,6 +42,25 @@ export default class CV extends React.Component {
                                 <tr>
                                     <td className="table-title">Swedish</td>
                                     <td>- Basic</td>
+                                </tr>
+                            </tbody>
+                        </table>
+						<h2>Education</h2>
+                        <table className="education-table">
+                            <tbody>
+                                <tr>
+                                    <td className="table-title">Media Technology Engineer</td>
+                                    <td>2015 - 2019</td>
+                                </tr>
+                                <tr>
+                                    <td>JAMK University of Applied Sciences</td>
+                                </tr>
+                                <tr>
+                                    <td className="table-title">High School Graduate</td>
+                                    <td>2006 - 2010</td>
+                                </tr>
+                                <tr>
+                                    <td>Itä-Suomen Koulun Lukio</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -67,7 +87,7 @@ export default class CV extends React.Component {
                                     <td>Finruservice Oy</td>
                                 </tr>
                                 <tr>
-                                    <td>Finruservice was a small business where I was responsible for sales and looking for business partners among other things.</td>
+                                    <td>Small business where I was responsible for sales and looking for business partners among other things.</td>
                                 </tr>
                                 <tr>
                                     <td className="table-title">Refunder / Customer Service</td>
