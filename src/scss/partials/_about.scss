@@ -13,18 +13,18 @@
 }
 .info-container-1 {
     overflow: hidden;
-    padding-bottom: 20px;
+    padding-bottom: $gutter--rem-1;
     img {
-        // float: right;
         display: block; 
-        margin-left: auto; //
-        margin-right: auto; //
-        margin-bottom: 35px; //
-        border-radius: 50%; // ?
-        border: 2px solid $primary-light; // ?
-        width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        border: 2px solid $color--main-light;
+        width: em(150px);
         @media (min-width: 960px) {
             float: right;
+            margin-top: 1em;
             margin-left: 0;
             margin-right: 0;
             margin-bottom: 0;
@@ -34,41 +34,38 @@
         float: left;
         max-width: 860px;
         @media (min-width: 960px) {
-            max-width: 590px; 
+            max-width: 620px; 
         }
     }
     h2 {
-        font-size: $font-size-1;
-        font-weight: 300;
-        margin-bottom: 30px;
+        font-size: $font-size--1;
+        font-weight: $font-weight--thin;
+        margin-bottom: $gutter--rem-1;
         text-align: center;
         @media (min-width: 960px) {
             text-align: center;
         }
     }
     p {
-        line-height: 135%;
-        font-size: $font-size-3;
+        font-size: $font-size--3;
         @media (min-width: 960px) {
-            line-height: 125%;
-            font-size: $font-size-2;
+            font-size: $font-size--2;
         }
     }
 }
 .info-container-2 {
     clear:both;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    font-size: $font-size-3;
-    line-height: 135%;
+    padding-top: $gutter--rem-1;
+    padding-bottom: $gutter--rem-1;
+    font-size: $font-size--3;
 }
 .info-container-3 {
-    padding-top: 20px;
+    padding-top: $gutter--rem-1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 70px;
+    font-size: em(70px);
     .devicons {
-        margin-bottom: 10px;
+        margin-bottom: rem(10px);
     }
 }

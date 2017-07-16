@@ -5,65 +5,159 @@
 .cv {
     @include basic-layout;
     .container {
-        max-width: 1260px;
-        
-        border: solid 1px red;
-        @media (min-width: 1060px) {
-
+        max-width: 1060px;
+        @media (min-width: 1024px) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .cv-container-1 {
+        max-width: 480px;
+        margin: 0 auto;
+        @media (min-width: 768px) {
+            max-width: 600px;
+            margin: 0;
+        }
+        @media (min-width: 1024px) {
+            max-width: 460px;
+        }
+        h2:first-child {
+            margin-bottom: $gutter--rem-2;
+            font-weight: $font-weight--light;
+        }
+        h2:nth-child(4) {
+            margin-bottom: $gutter--rem-1;
+            font-weight: $font-weight--light;
+        }
+    }
+    .skill-table {
+        tbody {
+            tr {
+                td:first-child {
+                    width: rem(12px);
+                }
+                td:nth-child(2) {
+                    padding: $gutter--rem-2 0 $gutter--rem-2 $gutter--rem-2;
+                }
+            }
+            tr:first-child {
+                td:first-child {
+                    color: limegreen;
+                }
+            }
+            tr:nth-child(2) {
+                td:first-child {
+                    color: yellow;
+                }
+            }
+            tr:nth-child(3) {
+                td:first-child {
+                    color: red;
+                }
+            }
+            .table-title-bullets {
+                line-height: rem(8px);
+                font-size: $font-size--small;
+            }
+        }
+    }
+    .other-skills {
+        margin-top: $gutter--rem-2;
+        margin-bottom: $gutter--rem-1;
+    }
+    .education-table {
+        width: 480px;
+        @media (min-width: 768px) {
+            width: 600px;
+        }
+        @media (min-width: 1024px) {
+            width: 460px;
+        }
+        tbody {
+            tr:nth-child(2) {
+                td {
+                    padding-bottom: $gutter--rem-1;
+                }
+            }
+            tr:nth-child(4) {
+                td {
+                    padding-bottom: $gutter--rem-1;
+                }
+            }
+            td:nth-child(2) {
+                text-align: right;
+            }
         }
     }
 
-    .cv-container-1 {
-		width: 100%;
-        
-        border: solid 1px blue;
-    }
     .cv-container-2 {
-		width: 100%;
-        
-        border: solid 1px blue;
+        max-width: 480px;
+        margin: 0 auto;
+        @media (min-width: 768px) {
+            max-width: 600px;
+            margin: 0;
+        }
+        @media (min-width: 1024px) {
+            max-width: 460px;
+        }
+        h2 {
+            margin-bottom: $gutter--rem-1;
+            font-weight: $font-weight--light;
+        }
+    }
+    .experience-table {
+        tbody {
+            tr:nth-child(2) {
+                td {
+                    padding-bottom: $gutter--rem-2;
+                }
+            }
+            tr:nth-child(3) {
+                td {
+                    padding-bottom: $gutter--rem-1;
+                }
+            }
+            tr:nth-child(5) {
+                td {
+                    padding-bottom: $gutter--rem-2;
+                }
+            }
+            tr:nth-child(6) {
+                td {
+                    padding-bottom: $gutter--rem-1;
+                }
+            }
+            tr:nth-child(8) {
+                td {
+                    padding-bottom: $gutter--rem-2;
+                }
+            }
+            tr:nth-child(9) {
+                td {
+                    padding-bottom: $gutter--rem-1;
+                }
+            }
+            td:nth-child(2) {
+                text-align: right;
+                width: 200px;
+            }
+        }
     }
 
-    .skill-table {
-        // max-width: 440px;
-        border: solid 1px green;
-		tbody {
-			tr {
-				padding: 40px;
-				td:first-child {
-					width: 10px;
-				}
-			}
-			tr:first-child {
-				td:first-child {
-					color: limegreen;
-				}
-			}
-			tr:nth-child(2) {
-				td:first-child {
-					color: yellow;
-				}
-			}
-			tr:nth-child(3) {
-				td:first-child {
-					color: red;
-				}
-			}
-		}
+    .education-list {
+        list-style: none;
+        li {
+            margin-bottom: $gutter--rem-1;
+        }
     }
-	.table-title-bullets {
-		line-height: 10px;
-		
-	}
-    .language-table {
-        // max-width: 440px;
-        border: solid 1px green;
-    }
-	.education-table {
-		border: solid 1px green;
-	}
-    .experience-table {
-        // max-width: 560px;
-        border: solid 1px green;
+    .experience-list {
+        list-style: none;
+        li:nth-child(odd) {
+            margin-bottom: $gutter--rem-2;
+        }
+        li:nth-child(even) {
+            margin-bottom: $gutter--rem-1;
+        }
     }
 }

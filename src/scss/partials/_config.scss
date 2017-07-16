@@ -1,0 +1,75 @@
+// ======================================
+//  config
+// ======================================
+
+// font-stacks
+
+$font-url--google : 'https://fonts.googleapis.com/css?family=Roboto:100,300,400';
+
+$font-family--primary : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// font weight
+
+$font-weight--thin : 100;
+$font-weight--light : 300;
+$font-weight--medium : 400;
+
+// colors
+
+$color--main-light : #bdbdbd; // grey (X11 gray)
+$color--main-medium : #747474; // sonic silver
+$color--main-dark : #1a1a1a; // eerie black
+$color--main-color : #61cf5f; // mantis
+
+$color--main-light-accent : lighten($color--main-light, 15%);
+$color--main-dark-transparent : rgba($color--main-dark, .75);
+
+// text
+
+$base__font-size : 18px;
+$base__line : 27px;
+
+// other variables
+
+$transition-nav : 0.4s ease-in-out;
+
+// ======================================
+//  utilities
+// ===================================== 
+
+@import url($font-url--google);
+
+@function em($target, $context: $base__font-size) {
+    @return ($target / $context) * 1em;
+}
+@function rem($target, $context: $base__font-size) {
+    @return ($target / $context) * 1rem;
+}
+
+// ======================================
+//  util variables
+// ===================================== 
+
+// font-size
+$font-size--small : em(12px);
+$font-size--1 : em(36px);
+$font-size--2 : em(23px);
+$font-size--3 : em(18px);
+
+$gutter--rem-1 : rem(30px);
+$gutter--rem-2 : rem(15px);
+$gutter--em-1 : em(30px);
+
+
+
+/////
+$primary-light: #bdbdbd; // grey (X11 gray)
+$primary-light-accent: lighten($primary-light, 15%);
+
+$primary-color: #61cf5f; // mantis
+
+$font-size-1: 36px;
+$font-size-2: 23px;
+$font-size-3: 18px;
+
+$font-size-small: 12px;

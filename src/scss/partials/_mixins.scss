@@ -4,8 +4,8 @@
 
 @mixin basic-layout {
     min-height: 100vh;
-    padding-top: 90px;
-    padding-bottom: 50px;
+    padding-top: rem(90px);
+    padding-bottom: rem(90px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +13,7 @@
         max-width: 960px;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: rem(30px);
+        padding-right: rem(30px);
     }
 }

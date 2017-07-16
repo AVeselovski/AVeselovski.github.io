@@ -8,19 +8,20 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    background: rgba(130, 130, 130, 1);
-    background: -webkit-linear-gradient(rgba(26, 26, 26, 1), rgba(130, 130, 130, 1));
-    background: -moz-linear-gradient(rgba(26, 26, 26, 1), rgba(130, 130, 130, 1));
-    background: -o-linear-gradient(rgba(26, 26, 26, 1), rgba(130, 130, 130, 1));
-    background: linear-gradient(rgba(26, 26, 26, 1), rgba(130, 130, 130, 1));
-    color: $primary-light;
-    min-height: 100vh;
+    font-family: $font-family--primary;
+    font-size: $base__font-size;
+    line-height: ($base__line/$base__font-size);
+    font-weight: $font-weight--light;
+    background: $color--main-dark;
+    background: linear-gradient($color--main-dark, $color--main-medium);
     animation: Pulsing 20s infinite;
+    color: $color--main-light;
+    min-height: 100vh;
 }
 @keyframes Pulsing {
     0% {background: #1a1a1a}
-    50% {background: #828282}
+    20% {background: #1a1a1a}
+    50% {background: #747474}
+    80% {background: #1a1a1a}
     100% {background: #1a1a1a}
 }
