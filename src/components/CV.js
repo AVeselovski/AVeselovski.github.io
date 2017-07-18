@@ -14,7 +14,6 @@ export default class CV extends React.Component {
               body = d.getElementsByTagName('body')[0],
               width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
               height = w.innerHeight || documentElement.clientHeight || body.clientHeight
-        console.log(width);
         this.setState({
             viewport: width
         });
@@ -45,7 +44,7 @@ export default class CV extends React.Component {
                         <p className="other-skills">Fluent in English, Finnish (bilingual proficiency), 
                         Russian (native language) and have knowledge basic Swedish.</p>
                         <h2>Education</h2>
-                        {this.state.viewport > 550 &&
+                        {this.state.viewport >= 550 &&
                         <table className="education-table">
                             <tbody>
                                 <tr>
@@ -72,7 +71,7 @@ export default class CV extends React.Component {
                     </div>
                     <div className="cv-container-2">
                         <h2>Work Experience</h2>
-                        {this.state.viewport > 550 &&
+                        {this.state.viewport >= 550 &&
                         <table className="experience-table">
                             <tbody>
                                 <tr>

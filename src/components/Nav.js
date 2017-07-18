@@ -1,5 +1,7 @@
 // libs
 import React from 'react';
+// assets
+import FaceImg from '../assets/face.png';
 
 export default class Nav extends React.Component {
     constructor(props) {
@@ -57,12 +59,7 @@ export default class Nav extends React.Component {
                             </svg>
                         </a>
                     </span>
-                    <ul className="navbar-nav">
-                        <li><a href="#page-top">Portfolio</a></li>
-                        <li><a href="#" className="bullets">&bull; &bull; &bull;</a></li>
-                        <li><a href="#" className="bullets">&bull; &bull;</a></li>
-                        <li><a href="#" className="bullets">&bull;</a></li>
-                    </ul>
+                    <img className="avatar" src={FaceImg} alt={'My Face'} />
                 </nav>
                 <div id="side-nav" className="side-nav" style={{width: this.state.sideNavWidth}}>
                     <a className="btn-close" onClick={() => this.closeSlideMenu()}>

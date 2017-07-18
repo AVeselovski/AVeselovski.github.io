@@ -24,11 +24,23 @@
         }
         h2:first-child {
             margin-bottom: $gutter--rem-2;
-            font-weight: $font-weight--light;
+            font-weight: $font-weight--thin;
+            font-size: $font-size--1;
+            text-align: center;
+            @media (min-width: 550px) {
+                font-size: $font-size--big;
+            }
+            @media (min-width: 1024px) {
+                text-align: left;
+            }
         }
         h2:nth-child(4) {
             margin-bottom: $gutter--rem-1;
-            font-weight: $font-weight--light;
+            font-weight: $font-weight--thin;
+            font-size: 1.5em;
+            @media (min-width: 550px) {
+                font-size: $font-size--1;
+            }
         }
     }
     .skill-table {
@@ -103,7 +115,15 @@
         }
         h2 {
             margin-bottom: $gutter--rem-1;
-            font-weight: $font-weight--light;
+            font-weight: $font-weight--thin;
+            font-size: 1.9em;
+            text-align: center;
+            @media (min-width: 550px) {
+                font-size: $font-size--big;
+            }
+            @media (min-width: 1024px) {
+                text-align: left;
+            }
         }
     }
     .experience-table {
@@ -144,16 +164,17 @@
             }
         }
     }
-
     .education-list {
         list-style: none;
         li {
+            font-weight: $font-weight--medium;
             margin-bottom: $gutter--rem-1;
         }
     }
     .experience-list {
         list-style: none;
         li:nth-child(odd) {
+            font-weight: $font-weight--medium;
             margin-bottom: $gutter--rem-2;
         }
         li:nth-child(even) {

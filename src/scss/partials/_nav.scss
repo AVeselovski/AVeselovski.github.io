@@ -35,6 +35,16 @@
         margin: 0 auto;
         margin-top: $gutter--rem-1;
     }
+    .avatar {
+        width: rem(60px);
+        height: rem(60px);
+        border-radius: 50%;
+        border: 2px solid $color--main-light;
+        float: right;
+        top: $gutter--rem-2;
+        right: $gutter--rem-1;
+        position: fixed;
+    }
     .bullets {
         font-size: $font-size--small;
     }

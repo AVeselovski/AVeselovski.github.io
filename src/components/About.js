@@ -1,7 +1,14 @@
 // libs
 import React from 'react';
-// assets
-import FaceImg from '../assets/face.png';
+
+const iconColors = {
+    html5: '#E85611',
+    css3: '#175BD9',
+    JS: '#F49B12',
+    sass: '#CE669C',
+    node: '#8BC930',
+    react: '#62DAFC'
+}
 
 export default class About extends React.Component {
     render() {
@@ -9,9 +16,8 @@ export default class About extends React.Component {
             <section className="about">
                 <div className="container">
                     <div className="info-container-1">
-                        <img src={FaceImg} alt={'My Face'} />
+                        <h2>Welcome!</h2>
                         <div className="basic-info">
-                            <h2>Welcome!</h2>
                             <p>My name is Artur and I'm studying Media Technology at Jyväskylä University of Applied Sciences, 
                             currently at my third academic year. My goal is to grow as a full-stack developer.</p>
                         </div>
@@ -23,12 +29,12 @@ export default class About extends React.Component {
                         Here are some technologies I love using...</p>
                     </div>
                     <div className="info-container-3">
-                        <span className="devicons devicons-html5" title="HTML5" />
-                        <span className="devicons devicons-css3" title="CSS3" />
-                        <span className="devicons devicons-sass" title="Sass" />
-                        <span className="devicons devicons-javascript_shield" title="JavaScript" />
-                        <span className="devicons devicons-nodejs_small" title="NodeJS" />
-                        <span className="devicons devicons-react" title="ReactJS" />
+                        <span className="devicons devicons-html5" title="HTML5" style={{color: iconColors.html5}} />
+                        <span className="devicons devicons-css3" title="CSS3" style={{color: iconColors.css3}} />
+                        <span className="devicons devicons-sass" title="Sass" style={{color: iconColors.sass}} />
+                        <span className="devicons devicons-javascript_shield" title="JavaScript" style={{color: iconColors.JS}} />
+                        <span className="devicons devicons-nodejs_small" title="NodeJS" style={{color: iconColors.node}} />
+                        <span className="devicons devicons-react" title="ReactJS" style={{color: iconColors.react}} />
                     </div>
                 </div>
             </section>
