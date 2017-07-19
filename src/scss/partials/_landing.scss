@@ -3,7 +3,11 @@
 // ======================================
 
 .landing {
-    @include basic-layout; 
+    @include basic-layout;
+    .wrap {
+        display: flex;
+        flex-direction: column;
+    }
     .ghost-div {
         height: 10vh;
     }

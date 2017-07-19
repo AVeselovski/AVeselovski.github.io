@@ -2,9 +2,9 @@
 import React from 'react';
 
 const iconColors = {
-    html5: '#E85611',
-    css3: '#175BD9',
-    JS: '#F49B12',
+    html5: '#fb7a5a',
+    css3: '#5ac1fb',
+    JS: '#fbcc5a',
     sass: '#CE669C',
     node: '#8BC930',
     react: '#62DAFC'

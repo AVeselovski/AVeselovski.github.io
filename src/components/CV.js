@@ -12,8 +12,7 @@ export default class CV extends React.Component {
               d = document,
               documentElement = d.documentElement,
               body = d.getElementsByTagName('body')[0],
-              width = w.innerWidth || documentElement.clientWidth || body.clientWidth,
-              height = w.innerHeight || documentElement.clientHeight || body.clientHeight
+              width = w.innerWidth || documentElement.clientWidth || body.clientWidth
         this.setState({
             viewport: width
         });

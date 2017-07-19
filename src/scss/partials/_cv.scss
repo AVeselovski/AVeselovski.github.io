@@ -30,7 +30,7 @@
             @media (min-width: 550px) {
                 font-size: $font-size--big;
             }
-            @media (min-width: 1024px) {
+            @media (min-width: 768px) {
                 text-align: left;
             }
         }
@@ -55,17 +55,17 @@
             }
             tr:first-child {
                 td:first-child {
-                    color: limegreen;
+                    color: #8BC930;
                 }
             }
             tr:nth-child(2) {
                 td:first-child {
-                    color: yellow;
+                    color: #fbcc5a;
                 }
             }
             tr:nth-child(3) {
                 td:first-child {
-                    color: red;
+                    color: #fb7a5a;
                 }
             }
             .table-title-bullets {
@@ -121,7 +121,7 @@
             @media (min-width: 550px) {
                 font-size: $font-size--big;
             }
-            @media (min-width: 1024px) {
+            @media (min-width: 768px) {
                 text-align: left;
             }
         }

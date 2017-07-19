@@ -13,15 +13,15 @@ body {
     line-height: ($base__line/$base__font-size);
     font-weight: $font-weight--light;
     background: $color--main-dark;
-    background: linear-gradient($color--main-dark, $color--main-medium);
+    // background: linear-gradient($color--main-dark, $color--main-medium);
     animation: Pulsing 20s infinite;
     color: $color--main-light;
     min-height: 100vh;
 }
 @keyframes Pulsing {
-    0% {background: #1a1a1a}
-    20% {background: #1a1a1a}
-    50% {background: #747474}
-    80% {background: #1a1a1a}
-    100% {background: #1a1a1a}
+    0% {background: $color--main-dark}
+    20% {background: $color--main-dark}
+    50% {background: $color--main-medium}
+    80% {background: $color--main-dark}
+    100% {background: $color--main-dark}
 }
