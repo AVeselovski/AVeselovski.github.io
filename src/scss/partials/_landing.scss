@@ -4,49 +4,90 @@
 
 .landing {
     @include basic-layout;
-    .wrap {
+    .mobile-wrap {
         display: flex;
         flex-direction: column;
-    }
-    .ghost-div {
-        height: 10vh;
-    }
-    .title-holder {
-        display: block;
-        margin: 0 auto;
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-        text-align: center;
-        border: solid 2px $color--main-light;
-        padding: em(20px) em(30px) em(25px) em(30px);
-        h1 {
-            font-size: $font-size--1;
-            font-weight: $font-weight--light;
-        }
-        h2 {
-            font-size: $font-size--2;
-            font-weight: $font-weight--light;
-        }
-    }
-    .landing-nav {
-        display: block;
-        text-align: center;
-        list-style: none;
-        width: em(100px);
         margin: 0 auto;
         a {
+            cursor: pointer;
             text-decoration: none;
             color: $color--main-light;
+            margin: $gutter--rem-2 auto;
+        }
+        h1 {
+            font-size: $font-size--2;
+            // font-size: 1.6em;
+            font-weight: $font-weight--light;
+            margin-top: $gutter--rem-2;
+            margin-bottom: $gutter--rem-2;
+            text-align: center;
+        }
+        h2 {
             font-size: $font-size--3;
-            transition: $transition-nav;
-            &:hover {
-                color: $color--main-light-accent;
+            // font-size: 1.05em;
+            font-weight: $font-weight--light;
+            margin-top: $gutter--rem-2;
+            text-align: center;
+        }
+        .box {
+            width: em(260px);
+            text-align: center;
+            padding: $gutter--rem-1;
+            font-size: $font-size--3;
+            border: solid 2px $color--main-light;
+        }
+    }
+    .desktop-wrap {
+        width: 768px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: $color--main-light;
+            margin: $gutter--rem-2;
+        }
+        .title-holder {
+            display: block;
+            width: em(700px);
+            margin: $gutter--rem-2 auto;
+            text-align: center;
+            // border: solid 2px $color--main-light;
+            padding: em(20px) em(30px) em(25px) em(30px);
+            h1 {
+                font-size: $font-size--1;
+                font-weight: $font-weight--light;
+            }
+            h2 {
+                font-size: $font-size--2;
+                font-weight: $font-weight--light;
             }
         }
-        .bullets {
-            display: block;
-            margin: em(6px) 0 em(6px) 0;
-            font-size: $font-size--small;
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: em(215px);
+            height: em(215px);
+            text-align: center;
+            padding: $gutter--rem-1;
+            font-size: $font-size--3;
+            border: solid 2px $color--main-light;
+            transition: $transition--landing;
+            span {
+                transition: $transition--landing;
+            }
+            &:hover {
+                border-color: $color--main-light-accent;
+                background-color: $color--main-light-accent;
+                span {
+                    transform: scale(1.2);
+                    color: $color--main-dark;
+                }
+            }
         }
     }
 }

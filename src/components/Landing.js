@@ -17,30 +17,30 @@ export default class Landing extends React.Component {
             viewport: width
         });
     }
+    updatePage(value) {
+        this.props.updatePage(value);
+    }
     render() {
         return (
             <section className="landing">
                 {this.state.viewport < 768 &&
-                    <div className="wrap">
-                        <a href="#about"><div class="box">ABOUT</div></a>
-                        <a href="#projects"><div class="box">PROJECTS</div></a>
-                        <a href="#cv"><div class="box">CV</div></a>
+                    <div className="mobile-wrap">
+                        <h1>{this.props.title}</h1>
+                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
+                        <a onClick={() => this.updatePage('projects')}><div className="box"><span>PROJECTS</span></div></a>
+                        <a onClick={() => this.updatePage('cv')}><div className="box"><span>CV</span></div></a>
+                        <h2>{this.props.titleKicker}</h2>
                     </div>
                 }
                 {this.state.viewport >= 768 &&
-                    <div className="wrap">
-                        <div className="ghost-div"></div>
+                    <div className="desktop-wrap">
                         <div className="title-holder">
                             <h1>{this.props.title}</h1>
                             <h2>{this.props.titleKicker}</h2>
                         </div>
-                        <ul className="landing-nav">
-                            <li><a href="#about">About</a></li>
-                            <li className="bullets">&bull;</li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li className="bullets">&bull;</li>
-                            <li><a href="#cv">CV</a></li>
-                        </ul>
+                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
+                        <a onClick={() => this.updatePage('projects')}><div className="box"><span>PROJECTS</span></div></a>
+                        <a onClick={() => this.updatePage('cv')}><div className="box"><span>CV</span></div></a>
                     </div>
                 }
             </section>

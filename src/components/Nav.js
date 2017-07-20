@@ -3,6 +3,11 @@ import React from 'react';
 // assets
 import FaceImg from '../assets/face.png';
 
+const linkStyles = {
+    activePadding: '10px',
+    activeColor: '#e3e3e3'
+}
+
 export default class Nav extends React.Component {
     constructor(props) {
         super(props);
@@ -27,6 +32,7 @@ export default class Nav extends React.Component {
             burgerMargin: burgerMargin,
             clickEvents: clickEvents
         });
+        this.props.slideOff('250px');
     }
     closeSlideMenu() {
         var sideNavWidth = '0px';
@@ -41,6 +47,11 @@ export default class Nav extends React.Component {
             burgerMargin: burgerMargin,
             clickEvents: clickEvents
         });
+        this.props.slideOff('0');
+    }
+    updatePage(value) {
+        this.props.updatePage(value);
+        this.closeSlideMenu();
     }
     render() {
         return(
@@ -59,7 +70,7 @@ export default class Nav extends React.Component {
                             </svg>
                         </a>
                     </span>
-                    <img className="avatar" src={FaceImg} alt={'My Face'} />
+                    <img className="avatar" src={FaceImg} onClick={() => this.updatePage('landing')} alt={'My Face'} />
                 </nav>
                 <div id="side-nav" className="side-nav" style={{width: this.state.sideNavWidth}}>
                     <a className="btn-close" onClick={() => this.closeSlideMenu()}>
@@ -69,9 +80,9 @@ export default class Nav extends React.Component {
                         </svg>
                     </a>
                     <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#cv">CV</a></li>
+                        <li><a onClick={() => this.updatePage('about')} style={(this.props.activePage === 'about') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>About</a></li>
+                        <li><a onClick={() => this.updatePage('projects')} style={(this.props.activePage === 'projects') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>Projects</a></li>
+                        <li><a onClick={() => this.updatePage('cv')} style={(this.props.activePage === 'cv') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>CV</a></li>
                     </ul>
                 </div>
             </div>

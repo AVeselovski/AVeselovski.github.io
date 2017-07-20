@@ -17,6 +17,20 @@ body {
     animation: Pulsing 20s infinite;
     color: $color--main-light;
     min-height: 100vh;
+    overflow-x: hidden;
+}
+.wrapper {
+    width: 100%;
+    transition: $transition--nav;
+}
+.fade-enter {
+    opacity: 0;
+    transform: scale(0.8);
+}
+.fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: .3s ease all;
 }
 @keyframes Pulsing {
     0% {background: $color--main-dark}

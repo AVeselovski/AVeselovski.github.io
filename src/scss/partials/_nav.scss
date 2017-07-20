@@ -11,7 +11,7 @@
         text-decoration: none;
         color: $color--main-light;
         stroke: $color--main-light;
-        transition: $transition-nav;
+        transition: $transition--nav;
         &:hover {
             color: $color--main-light-accent;
             stroke: $color--main-light-accent;
@@ -22,18 +22,9 @@
         float: left;
         margin-top: $gutter--rem-1;
         margin-left: $gutter--rem-1;
-        transition: $transition-nav;
+        transition: $transition--nav;
         width: 30px;
         height: 30px;
-    }
-    .navbar-nav {
-        display: none;
-        width: em(100px);
-        text-align: center;
-        list-style: none;
-        font-size: $font-size--3;
-        margin: 0 auto;
-        margin-top: $gutter--rem-1;
     }
     .avatar {
         width: rem(60px);
@@ -44,6 +35,11 @@
         top: $gutter--rem-2;
         right: $gutter--rem-1;
         position: fixed;
+        cursor: pointer;
+        transition: $transition--nav;
+        &:hover {
+            border-color: $color--main-light-accent;
+        }
     }
     .bullets {
         font-size: $font-size--small;
@@ -59,26 +55,23 @@
     overflow-x: hidden;
     padding-top: $gutter--rem-1;
     background-color: $color--main-dark-transparent;
-    transition: $transition-nav;
+    transition: $transition--nav;
     ul {
         margin-top: em(70px);
-        font-size: $font-size--3;
+        font-size: $font-size--2;
         a {
             margin: 0 0 $gutter--rem-1 $gutter--rem-1;
             display: block;
             text-decoration: none;
+            cursor: pointer;
             &:hover {
-                padding-left: em(10px);
-            }
-            &:active, 
-            &:focus {
-                color: $color--main-color;
+                padding-left: 5px;
             }
         }
     }
     a {
         color: $color--main-light;
-        transition: $transition-nav;
+        transition: $transition--nav;
         stroke: $color--main-light;
         &:hover {
             color: $color--main-light-accent;
