@@ -7,23 +7,13 @@ export default class Landing extends React.Component {
             viewport: ''
         }
     }
-    componentDidMount () {
-        const w = window,
-              d = document,
-              documentElement = d.documentElement,
-              body = d.getElementsByTagName('body')[0],
-              width = w.innerWidth || documentElement.clientWidth || body.clientWidth
-        this.setState({
-            viewport: width
-        });
-    }
     updatePage(value) {
         this.props.updatePage(value);
     }
     render() {
         return (
             <section className="landing">
-                {this.state.viewport < 768 &&
+                {this.props.viewport < 768 &&
                     <div className="mobile-wrap">
                         <h1>{this.props.title}</h1>
                         <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
@@ -32,7 +22,7 @@ export default class Landing extends React.Component {
                         <h2>{this.props.titleKicker}</h2>
                     </div>
                 }
-                {this.state.viewport >= 768 &&
+                {this.props.viewport >= 768 &&
                     <div className="desktop-wrap">
                         <div className="title-holder">
                             <h1>{this.props.title}</h1>

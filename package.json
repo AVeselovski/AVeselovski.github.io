@@ -10,10 +10,12 @@
   "author": "Artur Veselovski",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.6.1",
     "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
-    "react-scrollable-anchor": "^0.4.2"
+    "reactstrap": "^4.8.0"
   },
   "devDependencies": {
     "react-scripts": "^1.0.7"

@@ -12,6 +12,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
+            viewport: '',
             page: 'landing',
             slide: '0'
         }
@@ -34,14 +35,24 @@ export default class App extends React.Component {
             slide: value
         });
     }
+    componentDidMount () {
+        const w = window,
+              d = document,
+              documentElement = d.documentElement,
+              body = d.getElementsByTagName('body')[0],
+              width = w.innerWidth || documentElement.clientWidth || body.clientWidth
+        this.setState({
+            viewport: width
+        });
+    }
     render() {
         return (
             <div>
-                <Nav updatePage={this.updatePage} activePage={this.state.page} slideOff={this.slideOff} slideIn={this.slideIn} />
+                <Nav updatePage={this.updatePage} activePage={this.state.page} slideOff={this.slideOff} slideIn={this.slideIn} viewport={this.state.viewport} />
                 <div className="wrapper" style={{marginLeft: this.state.slide}}>
                     <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={300} transitionLeave={false}>
                         {this.state.page === 'landing' &&
-                            <Landing updatePage={this.updatePage} title={'ARTUR VESELOVSKI'} titleKicker={'ICT-Student / Media Technology'} />
+                            <Landing viewport={this.state.viewport} updatePage={this.updatePage} title={'ARTUR VESELOVSKI'} titleKicker={'ICT-Student / Media Technology'} />
                         }
                         {this.state.page === 'about' &&
                             <About />
@@ -50,7 +61,7 @@ export default class App extends React.Component {
                             <Projects />
                         }
                         {this.state.page === 'cv' &&
-                            <CV />
+                            <CV viewport={this.state.viewport} />
                         }
                     </ReactCSSTransitionGroup>
                 </div>

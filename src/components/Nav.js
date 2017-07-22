@@ -14,40 +14,48 @@ export default class Nav extends React.Component {
         this.state = {
             sideNavWidth: '0px',
             burgerOpacity: 1,
-            burgerRotation: '',
+            burgerFlipping: '',
             burgerMargin: '30px',
             clickEvents: 'auto'
         }
     }
     openSlideMenu() {
-        var sideNavWidth = '250px';
+        if (this.props.viewport < 768) {
+            var sideNavWidth = '100%';
+            var burgerMargin = 'calc(100% + 30px)';
+            var contentSlide = '0';
+        } else {
+            sideNavWidth = '250px';
+            burgerMargin = '280px';
+            contentSlide = '250px';
+        }
         var burgerOpacity = 0.25;
-        var burgerRotation = 'rotate(90deg)';
-        var burgerMargin = '280px';
+        var burgerFlipping = 'rotate(90deg)';
         var clickEvents = 'none';
         this.setState({
             sideNavWidth: sideNavWidth,
             burgerOpacity: burgerOpacity,
-            burgerRotation: burgerRotation,
+            burgerFlipping: burgerFlipping,
             burgerMargin: burgerMargin,
             clickEvents: clickEvents
         });
-        this.props.slideOff('250px');
+        this.props.slideOff(contentSlide);
     }
     closeSlideMenu() {
         var sideNavWidth = '0px';
         var burgerOpacity = 1;
-        var burgerRotation = 'rotate(0deg)';
+        var burgerFlipping = 'rotate(0deg)';
         var burgerMargin = '30px';
         var clickEvents = 'auto';
+        var contentSlide = '0';
         this.setState({
             sideNavWidth: sideNavWidth,
             burgerOpacity: burgerOpacity,
-            burgerRotation: burgerRotation,
+            burgerFlipping: burgerFlipping,
             burgerMargin: burgerMargin,
             clickEvents: clickEvents
         });
-        this.props.slideOff('0');
+        this.props.slideOff(contentSlide);
     }
     updatePage(value) {
         this.props.updatePage(value);
@@ -56,10 +64,10 @@ export default class Nav extends React.Component {
     render() {
         return(
             <div>
-                <nav className="navbar">
+                <nav className="my-navbar">
                     <span className="open-slide" style={{
                             opacity: this.state.burgerOpacity, 
-                            transform: this.state.burgerRotation, 
+                            transform: this.state.burgerFlipping, 
                             marginLeft: this.state.burgerMargin, 
                             pointerEvents: this.state.clickEvents}}>
                         <a onClick={() => this.openSlideMenu()} >

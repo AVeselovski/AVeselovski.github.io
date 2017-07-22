@@ -1,22 +1,6 @@
 import React from 'react';
 
 export default class CV extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            viewport: ''
-        }
-    }
-    componentDidMount () {
-        const w = window,
-              d = document,
-              documentElement = d.documentElement,
-              body = d.getElementsByTagName('body')[0],
-              width = w.innerWidth || documentElement.clientWidth || body.clientWidth
-        this.setState({
-            viewport: width
-        });
-    }
     render() {
         return (
             <section className="cv">
@@ -43,7 +27,7 @@ export default class CV extends React.Component {
                         <p className="other-skills">Fluent in English, Finnish (bilingual proficiency), 
                         Russian (native language) and have knowledge basic Swedish.</p>
                         <h2>Education</h2>
-                        {this.state.viewport >= 550 &&
+                        {this.props.viewport >= 550 &&
                         <table className="education-table">
                             <tbody>
                                 <tr>
@@ -62,7 +46,7 @@ export default class CV extends React.Component {
                                 </tr>
                             </tbody>
                         </table>}
-                        {this.state.viewport < 550 &&
+                        {this.props.viewport < 550 &&
                         <ul className="education-list">
                             <li>2015 - 2019 (ongoing)<br/>Media Technology Engineer, JAMK University of Applied Sciences</li>
                             <li>2006 - 2010<br/>High School Graduate, Itä-Suomen Koulun Lukio</li>
@@ -70,7 +54,7 @@ export default class CV extends React.Component {
                     </div>
                     <div className="cv-container-2">
                         <h2>Work Experience</h2>
-                        {this.state.viewport >= 550 &&
+                        {this.props.viewport >= 550 &&
                         <table className="experience-table">
                             <tbody>
                                 <tr>
@@ -110,7 +94,7 @@ export default class CV extends React.Component {
                                 </tr>
                             </tbody>
                         </table>}
-                        {this.state.viewport < 550 &&
+                        {this.props.viewport < 550 &&
                         <ul className="experience-list">
                             <li>15.05.2017 - 28.07.2017<br/>Junior Web Developer, WIMMA Lab</li>
                             <li>Responsible for creating web pages for the organization 
