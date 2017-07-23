@@ -3,9 +3,10 @@
 // ======================================
 
 .my-navbar {
+    z-index: 1;
     overflow: hidden;
     position: fixed;
-    height: rem(90px);
+    height: 90px;
     width: 100%;
     a {
         text-decoration: none;
@@ -27,8 +28,8 @@
         height: 30px;
     }
     .avatar {
-        width: rem(60px);
-        height: rem(60px);
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         border: 2px solid $color--main-light;
         float: right;
@@ -52,23 +53,39 @@
     z-index: 1;
     top: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     padding-top: $gutter--rem-1;
     background-color: $color--main-dark; 
     transition: $transition--nav;
     @media (min-width: 768px) {
         background-color: $color--main-dark-transparent;
     }
-    ul {
+    .mobile-nav-ul {
         margin-top: em(70px);
         font-size: $font-size--2;
+        list-style: none;
         a {
-            margin: 0 0 $gutter--rem-1 $gutter--rem-1;
+            width: em(80px);
+            margin: 0 auto;
+            padding: $gutter--rem-2 0 $gutter--rem-2 0;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    .desktop-nav-ul {
+        margin-top: em(70px);
+        font-size: $font-size--3;
+        a {
+            margin: 0;
+            padding: $gutter--rem-2 0 $gutter--rem-2 30px;
             display: block;
             text-decoration: none;
             cursor: pointer;
             &:hover {
-                padding-left: 5px;
+                padding-left: 35px;
+                box-shadow: 2px 0 0 $color--main-light-accent inset;
             }
         }
     }
@@ -79,6 +96,40 @@
         &:hover {
             color: $color--main-light-accent;
             stroke: $color--main-light-accent;
+        }
+    }
+    .info {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: $gutter--rem-1;
+        text-align: center;
+        width: 300px;
+        p {
+            margin: 0;
+            font-size: $font-size--small;
+        }
+        .icon-holder {
+            margin-bottom: $gutter--rem-2;
+            a {
+                text-decoration: none;
+                stroke: none;
+            }
+            svg {
+                display: inline-block;
+                font-size: em(60px);
+            }
+        }
+        @media (min-width: 768px) {
+            left: 0;
+            right: 0;
+            width: 250px;
+            transform: translateX(0);
+            .icon-holder {
+                svg {
+                    font-size: em(60px);
+                }
+            }
         }
     }
     .btn-close {

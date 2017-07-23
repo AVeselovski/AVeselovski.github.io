@@ -14,7 +14,7 @@ export default class About extends React.Component {
     render() {
         return (
             <section className="about">
-                <div className="container">
+                <div className="my-container">
                     <div className="info-container-1">
                         <h2>Welcome!</h2>
                         <div className="basic-info">

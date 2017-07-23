@@ -4,7 +4,7 @@
 
 .about {
     @include basic-layout;
-    .container {
+    .my-container {
         max-width: 860px;
     }
     display: flex;

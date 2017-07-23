@@ -4,7 +4,7 @@ export default class CV extends React.Component {
     render() {
         return (
             <section className="cv">
-                <div className="container">
+                <div className="my-container">
                     <div className="cv-container-1">
                         <h2>My Skills</h2>
                         <table className="skill-table">

@@ -2,10 +2,14 @@
 import React from 'react';
 // assets
 import FaceImg from '../assets/face.png';
+import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular';
+import TiSocialLinkedinCircular from 'react-icons/lib/ti/social-linkedin-circular';
 
 const linkStyles = {
-    activePadding: '10px',
-    activeColor: '#e3e3e3'
+    activePadding: '40px',
+    activeColor: '#e3e3e3',
+    activeShadow: '2px 0 0 #e3e3e3 inset',
+    activeUnderline: '0 -2px 0 #e3e3e3 inset'
 }
 
 export default class Nav extends React.Component {
@@ -67,9 +71,10 @@ export default class Nav extends React.Component {
                 <nav className="my-navbar">
                     <span className="open-slide" style={{
                             opacity: this.state.burgerOpacity, 
-                            transform: this.state.burgerFlipping, 
-                            marginLeft: this.state.burgerMargin, 
-                            pointerEvents: this.state.clickEvents}}>
+                                transform: this.state.burgerFlipping, 
+                                    marginLeft: this.state.burgerMargin, 
+                                        pointerEvents: this.state.clickEvents
+                        }}>
                         <a onClick={() => this.openSlideMenu()} >
                             <svg width="30" height="30">
                                 <path d="M0,1 30,1" strokeWidth="2" />
@@ -87,11 +92,62 @@ export default class Nav extends React.Component {
                             <path d="M0,1 30,29" strokeWidth="2" />
                         </svg>
                     </a>
-                    <ul>
-                        <li><a onClick={() => this.updatePage('about')} style={(this.props.activePage === 'about') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>About</a></li>
-                        <li><a onClick={() => this.updatePage('projects')} style={(this.props.activePage === 'projects') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>Projects</a></li>
-                        <li><a onClick={() => this.updatePage('cv')} style={(this.props.activePage === 'cv') ? {paddingLeft: linkStyles.activePadding, color: linkStyles.activeColor} : {} }>CV</a></li>
-                    </ul>
+                    {this.props.viewport < 768 &&
+                        <ul className="mobile-nav-ul">
+                            <li>
+                                <a onClick={() => this.updatePage('about')} style={(this.props.activePage === 'about') ? {
+                                        color: linkStyles.activeColor,
+                                        boxShadow: linkStyles.activeUnderline
+                                    } : {} }>About</a>
+                            </li>
+                            <li>
+                                <a onClick={() => this.updatePage('projects')} style={(this.props.activePage === 'projects') ? {
+                                        color: linkStyles.activeColor,
+                                        boxShadow: linkStyles.activeUnderline
+                                    } : {} }>Projects</a>
+                            </li>
+                            <li>
+                                <a onClick={() => this.updatePage('cv')} style={(this.props.activePage === 'cv') ? {
+                                        color: linkStyles.activeColor,
+                                        boxShadow: linkStyles.activeUnderline
+                                    } : {} }>CV</a>
+                            </li>
+                        </ul>
+                    }
+                    {this.props.viewport >= 768 &&
+                        <ul className="desktop-nav-ul">
+                            <li>
+                                <a onClick={() => this.updatePage('about')} style={(this.props.activePage === 'about') ? {
+                                        paddingLeft: linkStyles.activePadding, 
+                                        color: linkStyles.activeColor, 
+                                        boxShadow: linkStyles.activeShadow
+                                    } : {} }>About</a>
+                            </li>
+                            <li>
+                                <a onClick={() => this.updatePage('projects')} style={(this.props.activePage === 'projects') ? {
+                                        paddingLeft: linkStyles.activePadding, 
+                                        color: linkStyles.activeColor, 
+                                        boxShadow: linkStyles.activeShadow
+                                    } : {} }>Projects</a>
+                            </li>
+                            <li>
+                                <a onClick={() => this.updatePage('cv')} style={(this.props.activePage === 'cv') ? {
+                                        paddingLeft: linkStyles.activePadding, 
+                                        color: linkStyles.activeColor, 
+                                        boxShadow: linkStyles.activeShadow
+                                    } : {} }>CV</a>
+                            </li>
+                        </ul>
+                    }
+                    <div className="info">
+                        <div className="icon-holder">
+                            <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer"><TiSocialGithubCircular /></a>
+                            <a href="https://www.linkedin.com/in/artur-veselovski" target="_blank" rel="noopener noreferrer"><TiSocialLinkedinCircular /></a>
+                        </div>
+                        <p>artur.veselovski@hotmail.fi</p>
+                        <p>+358 500 594327</p>
+                        <p>© Artur Veselovski</p>
+                    </div>
                 </div>
             </div>
         );

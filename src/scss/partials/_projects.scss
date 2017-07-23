@@ -5,6 +5,97 @@
 .projects {
     @include basic-layout;
 
-    .project {
+    .my-container {
+        max-width: 380px;
+        @media (min-width: 768px) {
+            max-width: 768px;
+        }
+        @media (min-width: 1060px) {
+            max-width: 1060px;   
+        }
+    }
+    .card-columns {
+        column-gap: $gutter--rem-2;
+        column-count: 1;
+        @media (min-width: 768px) {
+            column-count: 2;
+        }
+        @media (min-width: 1060px) {
+            column-count: 3;   
+        }
+    }
+    .card {
+        background-color: transparent;
+        border: 2px solid $color--main-light;
+        border-radius: 0;
+        margin-bottom: $gutter--rem-2;
+        .card-block {
+            padding: $gutter--rem-2;
+        }
+        .card-img-top {
+            border-radius: 0;
+        }
+        h4 {
+            font-size: $font-size--2;
+            @media (min-width: 768px) {
+                font-size: $font-size--1;
+            }
+            font-weight: $font-weight--light;
+        }
+        p {
+            font-size: $font-size--3;
+        }
+        a {
+            text-decoration: none;
+            color: $color--main-light;
+        }
+        .badge-default {
+            font-size: $font-size--small;
+            background-color: $color--main-color;
+            color: $color--main-light-accent;
+            margin-right: $gutter--rem-2;
+            font-weight: $font-weight--light;
+        }
+        .devicons {
+            font-size: em(70px);
+        }
+        transition: $transition--general;
+        &:hover {
+            background-color: $color--main-light-accent;
+            border: 2px solid $color--main-light-accent;
+            a {
+                color: $color--main-medium;
+            }
+        }
+    }
+    .special-card {
+        text-align: center;
+        background-color: transparent;
+        border: none;
+        &:hover {
+            background-color: transparent;
+            border: none;
+            a {
+                color: $color--main-light;
+            }
+        }
+        .devicons {
+            transition: $transition--general;
+            &:hover {
+                color: $color--main-light-accent;
+            }
+        }
+        a {
+            color: $color--main-light;
+        }
+    }
+    .disabled-card {
+        &:hover {
+            background-color: transparent;
+            border: 2px solid $color--main-light;
+            a {
+                color: $color--main-light;
+            }
+        }
     }
 }

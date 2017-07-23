@@ -4,7 +4,7 @@
 
 .cv {
     @include basic-layout;
-    .container {
+    .my-container {
         max-width: 1060px;
         @media (min-width: 1024px) {
             width: 100%;
