@@ -7,6 +7,7 @@ import Landing from './Landing';
 import About from './About';
 import Projects from './Projects';
 import CV from './CV';
+import Meta from './Meta';
 
 export default class App extends React.Component {
     constructor() {
@@ -48,6 +49,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
+                <Meta />
                 <Nav updatePage={this.updatePage} activePage={this.state.page} slideOff={this.slideOff} slideIn={this.slideIn} viewport={this.state.viewport} />
                 <div className="wrapper" style={{marginLeft: this.state.slide}}>
                     <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={300} transitionLeave={false}>
