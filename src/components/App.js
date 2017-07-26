@@ -13,7 +13,7 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            viewport: '',
+            viewport: 0,
             page: 'landing',
             slide: '0'
         }

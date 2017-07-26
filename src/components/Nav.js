@@ -1,5 +1,6 @@
 // libs
 import React from 'react';
+import PropTypes from 'prop-types';
 // assets
 import FaceImg from '../assets/face.png';
 import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular';
@@ -28,6 +29,9 @@ export default class Nav extends React.Component {
             var sideNavWidth = '100%';
             var burgerMargin = 'calc(100% + 30px)';
             var contentSlide = '0';
+        } else if (this.props.viewport >= 768 && this.props.viewport <= 1024) {
+            sideNavWidth = '250px';
+            burgerMargin = '280px';
         } else {
             sideNavWidth = '250px';
             burgerMargin = '280px';
@@ -144,6 +148,7 @@ export default class Nav extends React.Component {
                             <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer"><TiSocialGithubCircular /></a>
                             <a href="https://www.linkedin.com/in/artur-veselovski" target="_blank" rel="noopener noreferrer"><TiSocialLinkedinCircular /></a>
                         </div>
+                        <p>This portfolio was built with React</p>
                         <p>artur.veselovski@hotmail.fi</p>
                         <p>+358 500 594327</p>
                         <p>© Artur Veselovski</p>
@@ -152,4 +157,12 @@ export default class Nav extends React.Component {
             </div>
         );
     }
+}
+
+Nav.propTypes = {
+    updatePage: PropTypes.func.isRequired,
+    activePage: PropTypes.string.isRequired,
+    slideOff: PropTypes.func.isRequired,
+    slideIn: PropTypes.func.isRequired,
+    viewport: PropTypes.number.isRequired
 }

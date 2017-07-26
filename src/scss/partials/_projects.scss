@@ -36,6 +36,7 @@
             border-radius: 0;
         }
         h4 {
+            margin-bottom: $gutter--rem-2;
             font-size: $font-size--2;
             @media (min-width: 768px) {
                 font-size: $font-size--1;
@@ -43,6 +44,7 @@
             font-weight: $font-weight--light;
         }
         p {
+            margin-bottom: $gutter--rem-2;
             font-size: $font-size--3;
         }
         a {
