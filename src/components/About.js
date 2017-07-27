@@ -19,14 +19,14 @@ export default class About extends React.Component {
                         <h2>Welcome!</h2>
                         <div className="basic-info">
                             <p>My name is Artur Veselovski and I'm studying Media Technology at Jyväskylä University of Applied Sciences (JAMK).  
-                            Currently I am at my third academic year.</p>
+                                Currently I am at my third academic year.</p>
                         </div>
                     </div>
                     <div className="info-container-2">
                         <p>I am very passionate about web/UI design, front-end and full-stack development. 
                             In web-design I love simple, yet elegant and most importantly working solutions with attention to details.</p>
                         <p>I have experience working as part of a team and I'm familiar with Agile & Lean methods. 
-                        I enjoy learning and trying out new technologies and here are some of the technologies I use frequently...</p>
+                            I enjoy learning and trying out new technologies and here are some of the technologies I use frequently...</p>
                     </div>
                     <div className="info-container-3">
                         <span className="devicons devicons-html5" title="HTML5" style={{color: iconColors.html5}} />
