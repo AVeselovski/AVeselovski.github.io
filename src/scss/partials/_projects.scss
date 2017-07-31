@@ -4,7 +4,10 @@
 
 .projects {
     @include basic-layout;
-
+    padding-bottom: 0;
+    @media (min-width: 768px) {
+        padding-bottom: $gutter--rem-1;
+    }
     .my-container {
         max-width: 380px;
         @media (min-width: 768px) {
@@ -92,9 +95,10 @@
         }
     }
     .disabled-card {
+        border: 2px solid $color--main-medium;
         &:hover {
             background-color: transparent;
-            border: 2px solid $color--main-light;
+            border: 2px solid $color--main-medium;
             a {
                 color: $color--main-light;
             }

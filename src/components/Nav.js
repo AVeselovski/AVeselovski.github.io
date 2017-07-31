@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // assets
-import FaceImg from '../assets/face.png';
 import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular';
 import TiSocialLinkedinCircular from 'react-icons/lib/ti/social-linkedin-circular';
 
@@ -10,7 +9,9 @@ const linkStyles = {
     activePadding: '40px',
     activeColor: '#e3e3e3',
     activeShadow: '2px 0 0 #e3e3e3 inset',
-    activeUnderline: '0 -2px 0 #e3e3e3 inset'
+    activeUnderline: '0 -2px 0 #e3e3e3 inset',
+    landingLogo: 'rotate(0deg)',
+    logoColor: '#59a96a'
 }
 
 export default class Nav extends React.Component {
@@ -87,7 +88,10 @@ export default class Nav extends React.Component {
                             </svg>
                         </a>
                     </span>
-                    <img className="avatar" src={FaceImg} onClick={() => this.updatePage('landing')} alt={'My Face'} />
+                    <span className="logo" onClick={() => this.updatePage('landing')} style={(this.props.activePage === 'landing') ? {
+                            transform: linkStyles.landingLogo,
+                            color: linkStyles.logoColor
+                        } : {} }><span style={(this.props.activePage === 'landing') ? {opacity: '1'} : {} }>A</span>V</span>
                 </nav>
                 <div id="side-nav" className="side-nav" style={{width: this.state.sideNavWidth}}>
                     <a className="btn-close" onClick={() => this.closeSlideMenu()}>
@@ -149,7 +153,7 @@ export default class Nav extends React.Component {
                             <a href="https://www.linkedin.com/in/artur-veselovski" target="_blank" rel="noopener noreferrer"><TiSocialLinkedinCircular /></a>
                         </div>
                         <p>This portfolio was built with React</p>
-                        <p>artur.veselovski@hotmail.fi</p>
+                        <p>artur.veselovski(at)hotmail.fi</p>
                         <p>+358 500 594327</p>
                         <p>© Artur Veselovski</p>
                     </div>

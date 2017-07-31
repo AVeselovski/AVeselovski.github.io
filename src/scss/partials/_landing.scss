@@ -54,26 +54,32 @@
             width: em(700px);
             margin: $gutter--rem-2 auto;
             text-align: center;
-            // border: solid 2px $color--main-light;
-            padding: em(20px) em(30px) em(25px) em(30px);
+            border: solid 2px $color--main-medium;
+            padding: $gutter--rem-1 $gutter--rem-1;
             h1 {
                 font-size: $font-size--1;
                 font-weight: $font-weight--light;
+                color: $color--main-color;
             }
             h2 {
                 font-size: $font-size--2;
                 font-weight: $font-weight--light;
+                margin: 8px 0;
+            }
+            h3 {
+                font-size: em(64px);
+                font-weight: $font-weight--thin;
+                color: $color--main-medium;
             }
         }
         .box {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: em(215px);
-            height: em(215px);
+            width: em(215px, 23px);
+            height: em(215px, 23px);
             text-align: center;
-            padding: $gutter--rem-1;
-            font-size: $font-size--3;
+            font-size: $font-size--2;
             border: solid 2px $color--main-light;
             transition: $transition--landing;
             span {

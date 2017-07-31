@@ -27,6 +27,7 @@ export default class Landing extends React.Component {
                 {this.props.viewport >= 768 &&
                     <div className="desktop-wrap">
                         <div className="title-holder">
+                            <h3>PORTFOLIO</h3>
                             <h1>{this.props.title}</h1>
                             <h2>{this.props.titleKicker}</h2>
                         </div>

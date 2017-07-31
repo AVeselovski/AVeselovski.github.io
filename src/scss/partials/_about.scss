@@ -14,28 +14,24 @@
 .info-container-1 {
     overflow: hidden;
     .basic-info {
-        padding-top: $gutter--rem-2;
+        padding-top: $gutter--rem-1;
         overflow: hidden;
     }
     h2 {
         font-size: $font-size--1;
         font-weight: $font-weight--thin;
-        margin-bottom: $gutter--rem-1;
+        padding-bottom: $gutter--rem-2;
         text-align: center;
         @media (min-width: 768px) {
             font-size: $font-size--big;
         }
     }
-}
-.info-container-2 {
-    padding-top: $gutter--rem-1;
-    padding-bottom: $gutter--rem-2;
-    font-size: $font-size--3;
     p {
-        padding-bottom: $gutter--rem-1; 
+        padding-bottom: $gutter--rem-1;
+        font-size: $font-size--3;
     }
 }
-.info-container-3 {
+.info-container-2 {
     padding-top: $gutter--rem-2;
     display: flex;
     flex-wrap: wrap;
