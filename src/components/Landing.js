@@ -1,6 +1,9 @@
 // libs
 import React from 'react';
 import PropTypes from 'prop-types';
+// assets
+import FaGithub from 'react-icons/lib/fa/github';
+import FaLinkedin from 'react-icons/lib/fa/linkedin';
 
 export default class Landing extends React.Component {
     constructor(props) {
@@ -27,13 +30,16 @@ export default class Landing extends React.Component {
                 {this.props.viewport >= 768 &&
                     <div className="desktop-wrap">
                         <div className="title-holder">
-                            <h3>PORTFOLIO</h3>
                             <h1>{this.props.title}</h1>
+                            <h3>PORTFOLIO</h3>
                             <h2>{this.props.titleKicker}</h2>
                         </div>
-                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
                         <a onClick={() => this.updatePage('projects')}><div className="box"><span>PROJECTS</span></div></a>
+                        <div className="box box-img"></div>
                         <a onClick={() => this.updatePage('cv')}><div className="box"><span>CV</span></div></a>
+                        <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer"><div className="box box-social"><span><FaGithub /></span></div></a>
+                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
+                        <a href="https://www.linkedin.com/in/artur-veselovski" target="_blank" rel="noopener noreferrer"><div className="box box-social"><span><FaLinkedin /></span></div></a>
                     </div>
                 }
             </section>

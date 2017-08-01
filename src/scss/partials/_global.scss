@@ -33,3 +33,10 @@ h1, h2, h3, h4, p {
     transform: scale(1);
     transition: .3s ease all;
 }
+.fade-leave {
+    opacity: 1;
+}
+.fade-leave-active {
+    opacity: 0;
+    transition: .3s ease all;
+}

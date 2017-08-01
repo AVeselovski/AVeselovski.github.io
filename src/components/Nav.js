@@ -1,6 +1,7 @@
 // libs
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // assets
 import TiSocialGithubCircular from 'react-icons/lib/ti/social-github-circular';
 import TiSocialLinkedinCircular from 'react-icons/lib/ti/social-linkedin-circular';
@@ -88,10 +89,18 @@ export default class Nav extends React.Component {
                             </svg>
                         </a>
                     </span>
-                    <span className="logo" onClick={() => this.updatePage('landing')} style={(this.props.activePage === 'landing') ? {
-                            transform: linkStyles.landingLogo,
-                            color: linkStyles.logoColor
-                        } : {} }><span style={(this.props.activePage === 'landing') ? {opacity: '1'} : {} }>A</span>V</span>
+                    <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={300} transitionLeaveTimeout={300}>
+                        {this.props.activePage !== 'landing' && 
+                            <span className="back-btn">
+                                <a onClick={() => this.updatePage('landing')}>
+                                    <svg width="30" height="16">
+                                        <path d="M0,16 15,1" strokeWidth="2" />
+                                        <path d="M15,1 30,16" strokeWidth="2" />
+                                    </svg>
+                                </a>
+                            </span>
+                        }
+                    </ReactCSSTransitionGroup>
                 </nav>
                 <div id="side-nav" className="side-nav" style={{width: this.state.sideNavWidth}}>
                     <a className="btn-close" onClick={() => this.closeSlideMenu()}>
