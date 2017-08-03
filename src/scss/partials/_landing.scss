@@ -4,8 +4,10 @@
 
 .landing {
     @include basic-layout;
-    padding-top: 0;
-    padding-bottom: 0;
+    @media (min-width: 768px) {
+        padding-top: 0;
+        padding-bottom: 0; 
+    }
     .mobile-wrap {
         display: flex;
         flex-direction: column;
@@ -93,7 +95,6 @@
                 border-color: $color--main-light-accent;
                 background-color: $color--main-light-accent;
                 span {
-                    transform: scale(1.2);
                     color: $color--main-dark;
                 }
             }

@@ -94,7 +94,7 @@ export default class Nav extends React.Component {
                             <span className="back-btn">
                                 <a onClick={() => this.updatePage('landing')}>
                                     <svg width="30" height="16">
-                                        <path d="M0,16 15,1" strokeWidth="2" />
+                                        <path d="M0,16 16,1" strokeWidth="2" />
                                         <path d="M15,1 30,16" strokeWidth="2" />
                                     </svg>
                                 </a>
