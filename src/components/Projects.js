@@ -14,6 +14,21 @@ export default class Projects extends React.Component {
                 <div className="my-container">
                     <CardColumns>
                         <Card>
+                            <a href="http://viktrainer.fi" target="_blank" rel="noopener noreferrer">
+                                <CardBlock>
+                                    <CardTitle>VIKTRAINER</CardTitle>
+                                    <CardText>A website for a personal trainer. From design all the way to deploying, using basic techniques such as PHP, JS and SASS with minimal Bootstrap skeleton.</CardText>
+                                    <div className="badge-holder">
+                                        <Badge pill>HTML5</Badge>
+                                        <Badge pill>Sass</Badge>
+                                        <Badge pill>JS</Badge>
+                                        <Badge pill>PHP</Badge>
+                                        <Badge pill>Bootstrap</Badge>
+                                    </div>
+                                </CardBlock>
+                            </a>
+                        </Card>
+                        <Card>
                             <a href="https://github.com/AVeselovski/dynamic-todo" target="_blank" rel="noopener noreferrer">
                                 <CardImg top width="100%" src={ToDo} alt="Dynamic To-Do" />
                                 <CardBlock>
@@ -34,27 +49,15 @@ export default class Projects extends React.Component {
                             <a href="https://wimmalab.github.io" target="_blank" rel="noopener noreferrer">
                                 <CardBlock>
                                     <CardTitle>WIMMA Lab</CardTitle>
-                                    <CardText>During my internship at WIMMA Lab (2.5 months) I completed several projects. A temporary website for the organization 
-                                        and a blog, data visualization for another team and the final WIMMA Lab website (2 person project).</CardText>
+                                    <CardText>During my internship at WIMMA Lab (2.5 months) I completed several projects. The WIMMA Lab website (2 person project), 
+                                        data visualization for another team, as well as a blog and a temporary website for the organization.
+                                        </CardText>
                                     <div className="badge-holder">
                                         <Badge pill>Node</Badge>
                                         <Badge pill>React</Badge>
                                         <Badge pill>Jekyll</Badge>
                                         <Badge pill>Bootstrap</Badge>
                                         <Badge pill>Sass</Badge>
-                                    </div>
-                                </CardBlock>
-                            </a>
-                        </Card>
-                        <Card className="disabled-card">
-                            <a>
-                                <CardBlock>
-                                    <CardTitle>Viktrainer</CardTitle>
-                                    <CardText>A website for a personal trainer. COMING SOON.</CardText>
-                                    <div className="badge-holder">
-                                        <Badge pill>HTML5</Badge>
-                                        <Badge pill>Sass</Badge>
-                                        <Badge pill>Bootstrap</Badge>
                                     </div>
                                 </CardBlock>
                             </a>
