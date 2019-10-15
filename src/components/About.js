@@ -1,38 +1,37 @@
 // libs
 import React from 'react';
-
-const iconColors = {
-    html5: '#fb7a5a',
-    css3: '#5ac1fb',
-    JS: '#fbcc5a',
-    sass: '#CE669C',
-    node: '#8BC930',
-    react: '#62DAFC'
-}
+// assets
+import face from '../assets/face.jpg';
 
 export default class About extends React.Component {
     render() {
         return (
             <section className="about">
-                <div className="my-container">
-                    <div className="info-container-1">
-                        <h2>Welcome!</h2>
-                        <div className="basic-info">
-                            <p>My name is Artur Veselovski and I'm studying Media Technology at Jyväskylä University of Applied Sciences (JAMK).  
-                                Currently I am at my third academic year.</p>
-                            <p>I am very passionate about web/UI design, front-end and full-stack development. 
-                                In web-design I love simple, yet elegant and most importantly working solutions with attention to details.</p>
-                            <p>I have experience working as part of a team and I'm familiar with Agile & Lean methods. 
-                                I enjoy learning and trying out new technologies and here are some of the technologies I use frequently...</p>
-                        </div>
+                <div className="container about-container">
+                    <h1>Artur Veselovski</h1>
+                    <div className="about-container__img-container">
+                        <img src={face} alt="Pic of me" />
                     </div>
-                    <div className="info-container-2">
-                        <span className="devicons devicons-html5" title="HTML5" style={{color: iconColors.html5}} />
-                        <span className="devicons devicons-css3" title="CSS3" style={{color: iconColors.css3}} />
-                        <span className="devicons devicons-javascript_shield" title="JavaScript" style={{color: iconColors.JS}} />
-                        <span className="devicons devicons-nodejs_small" title="NodeJS" style={{color: iconColors.node}} />
-                        <span className="devicons devicons-react" title="ReactJS" style={{color: iconColors.react}} />
-                        <span className="devicons devicons-sass" title="Sass" style={{color: iconColors.sass}} />                        
+                    <p className="about-container__current-status">
+                        Currently working as a software developer at{' '}
+                        <a href="https://meiko.fi" target="_blank" rel="noopener noreferrer">
+                            Meiko
+                        </a>
+                        .
+                    </p>
+                    <div className="about-container__basic-info">
+                        <p>
+                            Hi, my name is Artur. I'm a software developer with 2+ years of frontend developement
+                            experience in agile development teams. While my focus is on frontend development, I'm not
+                            totally lost when it comes to full-stack development. I like designing and building stuff
+                            (that's why I'm in software development after all!). I also make attempts at UI design in my
+                            own time, but I’m not a designer by a long shot, I just like to dabble. Good enough for me,
+                            maybe not so much for real world apps.
+                            <br />
+                            <br />
+                            Still a student, studying Media Technology at Jyväskylä University of Applied Sciences
+                            (JAMK). Currently bachelor's thesis away from graduating.
+                        </p>
                     </div>
                 </div>
             </section>

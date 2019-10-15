@@ -1,5 +1,5 @@
 {
-  "short_name": "Portfolio",
+  "short_name": "AV",
   "name": "Artur Veselovski | Portfolio",
   "icons": [
     {
@@ -31,11 +31,16 @@
       "src": "/android-chrome-256x256.png",
       "type": "image/png",
       "sizes": "256x256"
+    },
+    {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
     }
   ],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#1a1a1a",
-  "theme_color": "#1a1a1a",
+  "background_color": "#202124",
+  "theme_color": "#202124",
   "display": "standalone",
   "orientation": "portrait"
 }

@@ -13,58 +13,67 @@ export default class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            viewport: 0,
+            isMobile: true,
             page: 'landing',
-            slide: '0'
-        }
+            slide: '0',
+        };
         this.updatePage = this.updatePage.bind(this);
         this.slideOff = this.slideOff.bind(this);
         this.slideIn = this.slideIn.bind(this);
+        this.updateLayout = this.updateLayout.bind(this);
     }
     updatePage(value) {
         this.setState({
-            page: value
+            page: value,
         });
     }
     slideOff(value) {
         this.setState({
-            slide: value
+            slide: value,
         });
     }
     slideIn(value) {
         this.setState({
-            slide: value
+            slide: value,
         });
     }
-    componentDidMount () {
-        const w = window,
-              d = document,
-              documentElement = d.documentElement,
-              body = d.getElementsByTagName('body')[0],
-              width = w.innerWidth || documentElement.clientWidth || body.clientWidth
-        this.setState({
-            viewport: width
-        });
+    updateLayout() {
+        if (window.innerWidth < 768) {
+            this.setState(prevState => {
+                return { isMobile: true };
+            });
+        } else {
+            this.setState(prevState => {
+                return { isMobile: false };
+            });
+        }
+    }
+    componentDidMount() {
+        this.updateLayout();
+        window.addEventListener('resize', this.updateLayout);
+    }
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateLayout);
     }
     render() {
         return (
             <div>
                 <Meta />
-                <Nav updatePage={this.updatePage} activePage={this.state.page} slideOff={this.slideOff} slideIn={this.slideIn} viewport={this.state.viewport} />
-                <div className="wrapper" style={{marginLeft: this.state.slide}}>
-                    <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={300} transitionLeave={false}>
-                        {this.state.page === 'landing' &&
-                            <Landing viewport={this.state.viewport} updatePage={this.updatePage} title={'ARTUR VESELOVSKI'} titleKicker={'ICT-Student / Media Technology'} />
-                        }
-                        {this.state.page === 'about' &&
-                            <About />
-                        }
-                        {this.state.page === 'projects' &&
-                            <Projects />
-                        }
-                        {this.state.page === 'cv' &&
-                            <CV viewport={this.state.viewport} />
-                        }
+                <Nav
+                    updatePage={this.updatePage}
+                    activePage={this.state.page}
+                    slideOff={this.slideOff}
+                    slideIn={this.slideIn}
+                    isMobile={this.state.isMobile}
+                />
+                <div className="wrapper" style={{ marginLeft: this.state.slide }}>
+                    <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={350} transitionLeave={false}>
+                        {this.state.page === 'landing' && (
+                            <Landing isMobile={this.state.isMobile} updatePage={this.updatePage} />
+                        )}
+                        {this.state.page === 'about' && <About />}
+                        {this.state.page === 'projects' && <Projects />}
+                        {this.state.page === 'cv' && <CV />}
                     </ReactCSSTransitionGroup>
                 </div>
             </div>

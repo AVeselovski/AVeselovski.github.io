@@ -1,250 +1,62 @@
 // ======================================
-//  cv
+//  Skills
 // ======================================
 
-.cv {
+.skills {
     @include basic-layout;
-    .my-container {
-        max-width: 1060px;
-        @media (min-width: 1024px) {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-    }
-    .cv-container-1 {
-        max-width: 480px;
-        margin: 0 auto;
-        @media (min-width: 768px) {
-            max-width: 600px;
-            margin: 0;
-        }
-        @media (min-width: 1024px) {
-            max-width: 460px;
-        }
-        h2:first-child {
-            margin-bottom: $gutter--rem-2;
-            font-weight: $font-weight--thin;
-            font-size: $font-size--1;
-            text-align: center;
-            @media (min-width: 550px) {
-                font-size: $font-size--big;
-            }
-            @media (min-width: 768px) {
-                text-align: left;
-            }
-        }
-        h2:nth-child(4) {
-            margin-bottom: $gutter--rem-1;
-            font-weight: $font-weight--thin;
-            font-size: 1.5em;
-            @media (min-width: 550px) {
-                font-size: $font-size--1;
-            }
-        }
-    }
-    .skill-table {
-        tbody {
-            tr {
-                td:first-child {
-                    width: rem(12px);
-                }
-                td:nth-child(2) {
-                    padding: $gutter--rem-2 0 $gutter--rem-2 $gutter--rem-2;
-                }
-            }
-            tr:first-child {
-                td:first-child {
-                    color: #8BC930;
-                }
-            }
-            tr:nth-child(2) {
-                td:first-child {
-                    color: #fbcc5a;
-                }
-            }
-            tr:nth-child(3) {
-                td:first-child {
-                    color: #fb7a5a;
-                }
-            }
-            .table-title-bullets {
-                line-height: rem(8px);
-                font-size: $font-size--small;
-            }
-        }
-    }
-    .other-skills {
-        margin-top: $gutter--rem-2;
-        margin-bottom: $gutter--rem-1;
-    }
-    .education-table {
-        width: 480px;
-        @media (min-width: 768px) {
-            width: 600px;
-        }
-        @media (min-width: 1024px) {
-            width: 460px;
-        }
-        tbody {
-            tr:nth-child(2) {
-                td {
-                    padding-bottom: $gutter--rem-1;
-                }
-            }
-            tr:nth-child(4) {
-                td {
-                    padding-bottom: $gutter--rem-1;
-                }
-            }
-            td:nth-child(2) {
-                text-align: right;
-            }
-        }
-    }
 
-    .cv-container-2 {
-        max-width: 480px;
-        margin: 0 auto;
-        @media (min-width: 768px) {
-            max-width: 600px;
-            margin: 0;
-        }
-        @media (min-width: 1024px) {
-            max-width: 460px;
-        }
-        h2 {
-            margin-bottom: $gutter--rem-1;
-            font-weight: $font-weight--thin;
-            font-size: 1.9em;
-            text-align: center;
-            @media (min-width: 550px) {
+    .skills-container {
+        h1 {
+            color: $darkGrey;
+            font-size: em(40px);
+            font-weight: $font-weight--medium;
+            margin-bottom: $spacing-lg;
+
+            @media (min-width: 376px) {
                 font-size: $font-size--big;
             }
+        }
+
+        p {
+            font-size: $font-size--2;
+            margin-bottom: $spacing-lg;
+            text-align: left;
+
             @media (min-width: 768px) {
-                text-align: left;
+                font-size: $font-size--3;
+                font-weight: $font-weight--medium;
             }
         }
-    }
-    .experience-table {
-        tbody {
-            tr:nth-child(2) {
-                td {
-                    padding-bottom: $gutter--rem-2;
-                }
-            }
-            tr:nth-child(3) {
-                td {
-                    padding-bottom: $gutter--rem-1;
-                }
-            }
-            tr:nth-child(5) {
-                td {
-                    padding-bottom: $gutter--rem-2;
-                }
-            }
-            tr:nth-child(6) {
-                td {
-                    padding-bottom: $gutter--rem-1;
-                }
-            }
-            tr:nth-child(8) {
-                td {
-                    padding-bottom: $gutter--rem-2;
-                }
-            }
-            tr:nth-child(9) {
-                td {
-                    padding-bottom: $gutter--rem-1;
-                }
-            }
-            td:nth-child(2) {
-                text-align: right;
-                width: 200px;
-            }
+
+        .badge-holder {
+            margin-bottom: $spacing-xl;
         }
-    }
-    .education-list {
-        list-style: none;
-        li {
+
+        .badge-default {
+            background-color: darken($blue, 10);
+            color: lighten($lightestGrey, 10);
+            font-size: $font-size--small;
             font-weight: $font-weight--medium;
-            margin-bottom: $gutter--rem-1;
+            margin-right: $spacing-xs;
+            margin-bottom: $spacing-xs;
         }
-    }
-    .experience-list {
-        list-style: none;
-        li:nth-child(odd) {
-            font-weight: $font-weight--medium;
-            margin-bottom: $gutter--rem-2;
-        }
-        li:nth-child(even) {
-            margin-bottom: $gutter--rem-1;
-        }
-    }
-    .cv-icons {
-        min-width: 260px;
-        max-width: 1060px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: $gutter--rem-2;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        .left {
-            margin-bottom: $gutter--rem-2;
+
+        h2 {
+            font-size: em(22px);
             text-align: center;
+
+            @media (min-width: 768px) {
+                font-size: $font-size--1;
+                font-weight: $font-weight--medium;
+            }
         }
-        .right {
-            margin-bottom: $gutter--rem-2;
+
+        .icon-container {
             text-align: center;
-        }
-        a {
-            color: $color--main-light;
-        }
-        svg {
-            margin-top: $gutter--rem-2;
-            font-size: $font-size--big;
-            transition: $transition--general;
-            &:hover {
-                color: $color--main-light-accent;
-            }
-        }
-        h3 {
-            font-size: $font-size--3;
-            font-weight: $font-weight--light;
-            margin: 0;
-        }
-        @media (min-width: 550px) {
-            width: 480px;
-        }
-        @media (min-width: 768px) {
-            width: 600px;
-        }
-        @media (min-width: 1024px) {
-            width: 100%;
-            padding-left: 30px;
-            padding-right: 30px;
-            justify-content: space-between;
-            svg {
-                margin-top: 0;
-            }
-            .left {
-                text-align: left;
-            }
-            .right {
-                text-align: right;
-            }
-            .left-text {
-                position: absolute;
-                left: rem(120px);
-                top: rem(20px);
-                overflow: hidden;
-            }
-            .right-text {
-                position: absolute;
-                right: rem(120px);
-                top: rem(20px);
-                overflow: hidden;
+
+            a {
+                color: $darkGrey;
+                font-size: $font-size--big;
             }
         }
     }

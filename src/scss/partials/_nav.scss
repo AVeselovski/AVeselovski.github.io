@@ -2,143 +2,179 @@
 //  nav
 // ======================================
 
-.my-navbar {
-    z-index: 1;
+.header-nav {
+    height: 80px;
     overflow: hidden;
     position: fixed;
-    height: 90px;
     width: 100%;
+    z-index: 1;
+
     a {
+        color: $darkGrey;
+        stroke: $darkGrey;
         text-decoration: none;
-        color: $color--main-light;
-        stroke: $color--main-light;
-        transition: $transition--nav;
+        transition: $transition;
+
         &:hover {
-            color: $color--main-light-accent;
-            stroke: $color--main-light-accent;
+            color: $darkerGrey;
+            stroke: $darkerGrey;
         }
     }
-    .open-slide {
-        cursor: pointer;
-        float: left;
-        margin-top: $gutter--rem-1;
-        transition: $transition--nav;
-        width: 30px;
-        height: 30px;
-    }
+
     .back-btn {
         cursor: pointer;
         float: right;
-        margin-top: $gutter--rem-1;
-        margin-right: 30px;
-        width: 30px;
         height: 30px;
+        margin-right: 16px;
+        margin-top: 24px;
         padding-top: 4px;
+        width: 30px;
     }
-    .bullets {
-        font-size: $font-size--small;
+}
+
+.btn-menu {
+    cursor: pointer;
+    height: 30px;
+    left: 16px;
+    position: fixed;
+    top: 24px;
+    transition: $transition;
+    width: 30px;
+}
+.btn-menu.open {
+    cursor: default;
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(90deg);
+
+    @media screen and (min-width: 768px) {
+        left: 256px;
+        opacity: 0.25;
     }
 }
 
 .side-nav {
+    background-color: $lightestGrey;
+    bottom: 0;
+    color: $darkGrey;
     height: 120%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
     left: 0;
+    left: -100%;
     overflow: hidden;
-    padding-top: $gutter--rem-1;
-    background-color: $color--main-dark; 
-    transition: $transition--nav;
-    @media (min-width: 768px) {
-        background-color: $color--main-dark-transparent;
+    position: fixed;
+    top: 0;
+    transition: $transition;
+    width: 100%;
+    z-index: 1;
+
+    @media screen and (min-width: 768px) {
+        background-color: $darkerGrey;
+        color: $lightGrey;
+        left: -240px;
+        transition: left 350ms cubic-bezier(0.23, 1, 0.32, 1);
+        width: 240px;
     }
+
     .mobile-nav-ul {
-        margin-top: em(70px);
         font-size: $font-size--2;
+        font-weight: $font-weight--medium;
         list-style: none;
+        margin-top: em(70px);
+
         a {
-            width: em(80px);
-            margin: 0 auto;
-            padding: $gutter--rem-2 0 $gutter--rem-2 0;
-            display: block;
-            text-decoration: none;
-            text-align: center;
+            border-bottom: 2px solid $lightestGrey;
             cursor: pointer;
-        }
-        // workaround for landscape phone
-        @media (max-width: 767px) and (orientation: landscape) {
-            margin-top: rem(60px);
+            display: block;
+            margin: 0 auto;
+            padding: $spacing-md 0 $spacing-xs 0;
+            text-align: center;
+            text-decoration: none;
+            width: em(80px);
         }
     }
+
     .desktop-nav-ul {
-        margin-top: em(70px);
         font-size: $font-size--3;
+        font-weight: $font-weight--medium;
+        list-style: none;
+        margin-top: em(70px);
+
         a {
-            margin: 0;
-            padding: $gutter--rem-2 0 $gutter--rem-2 30px;
-            display: block;
-            text-decoration: none;
             cursor: pointer;
+            display: block;
+            margin: 0;
+            padding: $spacing-md 0 $spacing-md 30px;
+            text-decoration: none;
+            transition: border-left $transition, color $transition, padding $transition;
+
             &:hover {
-                padding-left: 35px;
-                box-shadow: 2px 0 0 $color--main-light-accent inset;
+                border-left: 4px solid $lightGrey;
+                color: lighten($lightestGrey, 10);
+                padding-left: 34px;
             }
         }
     }
+
     a {
-        color: $color--main-light;
-        transition: $transition--nav;
-        stroke: $color--main-light;
+        color: $darkGrey;
+        stroke: $darkGrey;
+        transition: $transition;
+
         &:hover {
-            color: $color--main-light-accent;
-            stroke: $color--main-light-accent;
+            color: $darkerGrey;
+            stroke: $darkerGrey;
+        }
+
+        @media (min-width: 768px) {
+            color: $lightestGrey;
+            stroke: $lightestGrey;
+
+            &:hover {
+                color: lighten($lightestGrey, 10);
+                stroke: lighten($lightestGrey, 10);
+            }
         }
     }
+
     .info {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         bottom: 20%;
+        position: absolute;
         text-align: center;
-        width: 300px;
+        width: 100%;
+
         p {
-            margin: 0;
             font-size: $font-size--small;
+            font-weight: $font-weight--medium;
+            margin: 0;
         }
+
         .icon-holder {
-            margin-bottom: $gutter--rem-2;
+            margin-bottom: $spacing-sm;
+
             a {
-                text-decoration: none;
                 stroke: none;
+                text-decoration: none;
             }
             svg {
                 display: inline-block;
-                font-size: em(60px);
+                font-size: em(36px);
             }
         }
-        // workaround for landscape phone
+
+        // workaround for landscape phone EDIT: what?
         @media (max-width: 767px) and (orientation: landscape) {
             display: none;
         }
-        @media (min-width: 768px) {
-            left: 0;
-            right: 0;
-            width: 250px;
-            transform: translateX(0);
-            .icon-holder {
-                svg {
-                    font-size: em(60px);
-                }
-            }
-        }
     }
     .btn-close {
-        height: 30px;
-        width:  30px;
         cursor: pointer;
+        height: 30px;
         position: absolute;
-        top: $gutter--rem-1;
-        right: $gutter--rem-1;
+        right: 16px;
+        top: 24px;
+        width: 30px;
     }
+}
+.side-nav.open {
+    left: 0px;
 }

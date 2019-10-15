@@ -1,47 +1,68 @@
 // libs
 import React from 'react';
 import PropTypes from 'prop-types';
-// assets
-import FaGithub from 'react-icons/lib/fa/github';
-import FaLinkedin from 'react-icons/lib/fa/linkedin';
 
 export default class Landing extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            viewport: ''
-        }
-    }
     updatePage(value) {
         this.props.updatePage(value);
     }
     render() {
         return (
             <section className="landing">
-                {this.props.viewport < 768 &&
-                    <div className="mobile-wrap">
-                        <h1>{this.props.title}</h1>
-                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
-                        <a onClick={() => this.updatePage('projects')}><div className="box"><span>PROJECTS</span></div></a>
-                        <a onClick={() => this.updatePage('cv')}><div className="box"><span>CV</span></div></a>
-                        <h2>{this.props.titleKicker}</h2>
+                {this.props.isMobile && (
+                    <div className="container landing-container-mobile">
+                        <h1>
+                            <strong>
+                                Artur
+                                <br /> Veselovski
+                            </strong>
+                            <br /> Software
+                            <br /> Developer
+                        </h1>
+                        <hr></hr>
+                        <a onClick={() => this.updatePage('about')} className="landing-container-mobile__box">
+                            <h2>About</h2>
+                            <p>Very little about me</p>
+                        </a>
+                        <a onClick={() => this.updatePage('projects')} className="landing-container-mobile__box">
+                            <h2>Projects</h2>
+                            <p>Little personal projects</p>
+                        </a>
+                        <a onClick={() => this.updatePage('cv')} className="landing-container-mobile__box">
+                            <h2>Skills & Experience</h2>
+                            <p>Might be interesting to know</p>
+                        </a>
+                        <a onClick={() => {}} className="landing-container-mobile__box--disabled">
+                            <h2>Styleguide</h2>
+                            <p>My personal component library</p>
+                        </a>
                     </div>
-                }
-                {this.props.viewport >= 768 &&
-                    <div className="desktop-wrap">
-                        <div className="title-holder">
-                            <h1>{this.props.title}</h1>
-                            <h3>PORTFOLIO</h3>
-                            <h2>{this.props.titleKicker}</h2>
-                        </div>
-                        <a onClick={() => this.updatePage('projects')}><div className="box"><span>PROJECTS</span></div></a>
-                        <div className="box box-img"></div>
-                        <a onClick={() => this.updatePage('cv')}><div className="box"><span>CV</span></div></a>
-                        <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer"><div className="box box-social"><span><FaGithub /></span></div></a>
-                        <a onClick={() => this.updatePage('about')}><div className="box"><span>ABOUT</span></div></a>
-                        <a href="https://www.linkedin.com/in/artur-veselovski" target="_blank" rel="noopener noreferrer"><div className="box box-social"><span><FaLinkedin /></span></div></a>
+                )}
+                {!this.props.isMobile && (
+                    <div className="container landing-container-desktop">
+                        <h1>
+                            <strong>Artur Veselovski</strong> <br />
+                            Software Developer
+                        </h1>
+                        <hr></hr>
+                        <a onClick={() => this.updatePage('about')} className="landing-container-desktop__box">
+                            <h2>About</h2>
+                            <p>Very little about me</p>
+                        </a>
+                        <a onClick={() => this.updatePage('projects')} className="landing-container-desktop__box">
+                            <h2>Projects</h2>
+                            <p>Little personal projects</p>
+                        </a>
+                        <a onClick={() => this.updatePage('cv')} className="landing-container-desktop__box">
+                            <h2>Skills & Experience</h2>
+                            <p>Might be interesting to know</p>
+                        </a>
+                        <a onClick={() => {}} className="landing-container-desktop__box--disabled">
+                            <h2>Styleguide</h2>
+                            <p>My personal component library</p>
+                        </a>
                     </div>
-                }
+                )}
             </section>
         );
     }
@@ -49,7 +70,5 @@ export default class Landing extends React.Component {
 
 Landing.propTypes = {
     updatePage: PropTypes.func.isRequired,
-    viewport: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
-    titleKicker: PropTypes.string.isRequired
-}
+    isMobile: PropTypes.bool.isRequired,
+};

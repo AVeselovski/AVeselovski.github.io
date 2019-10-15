@@ -1,6 +1,6 @@
 // libs
 import React from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 export default class Meta extends React.Component {
     render() {
@@ -10,7 +10,9 @@ export default class Meta extends React.Component {
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-                <meta name="theme-color" content="#1a1a1a" />
+                <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#202124" />
+                <meta name="msapplication-TileColor" content="#2d89ef" />
+                <meta name="theme-color" content="#202124" />
             </Helmet>
         );
     }

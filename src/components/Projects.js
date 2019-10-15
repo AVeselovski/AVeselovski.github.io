@@ -1,93 +1,51 @@
 // libs
 import React from 'react';
 // components
-import { Card, CardImg, CardTitle, CardText, CardColumns, 
-        CardBlock, Badge } from 'reactstrap';
-// assets
-import IoT from '../assets/projects/iotitude-2.png';
-import ToDo from '../assets/projects/dynamic-todo-1.png';
+import { Card, CardTitle, CardText, CardBlock, Badge } from 'reactstrap';
 
 export default class Projects extends React.Component {
     render() {
         return (
             <section className="projects">
-                <div className="my-container">
-                    <CardColumns>
-                        <Card>
-                            <a href="http://viktrainer.fi" target="_blank" rel="noopener noreferrer">
-                                <CardBlock>
-                                    <CardTitle>VIKTRAINER</CardTitle>
-                                    <CardText>A website for a personal trainer. From design all the way to deploying, using basic techniques such as PHP, JS and SASS with minimal Bootstrap skeleton.</CardText>
-                                    <div className="badge-holder">
-                                        <Badge pill>HTML5</Badge>
-                                        <Badge pill>Sass</Badge>
-                                        <Badge pill>JS</Badge>
-                                        <Badge pill>PHP</Badge>
-                                        <Badge pill>Bootstrap</Badge>
-                                    </div>
-                                </CardBlock>
-                            </a>
-                        </Card>
-                        <Card>
-                            <a href="https://github.com/AVeselovski/dynamic-todo" target="_blank" rel="noopener noreferrer">
-                                <CardImg top width="100%" src={ToDo} alt="Dynamic To-Do" />
-                                <CardBlock>
-                                    <CardTitle>Dynamic To-Do</CardTitle>
-                                    <CardText>Simple To-Do connected to REST API. Back-end built with Node, Express and MongoDB. 
-                                        Front-end built with React and Material-UI.</CardText>
-                                    <div className="badge-holder">
-                                        <Badge pill>Node</Badge>
-                                        <Badge pill>React</Badge>
-                                        <Badge pill>Express</Badge>
-                                        <Badge pill>MongoDB</Badge>
-                                        <Badge pill>Material-UI</Badge>
-                                    </div>
-                                </CardBlock>
-                            </a>
-                        </Card>
-                        <Card>
-                            <a href="https://wimmalab.github.io" target="_blank" rel="noopener noreferrer">
-                                <CardBlock>
-                                    <CardTitle>WIMMA Lab</CardTitle>
-                                    <CardText>During my internship at WIMMA Lab (2.5 months) I completed several projects. The WIMMA Lab website (2 person project), 
-                                        data visualization for another team, as well as a blog and a temporary website for the organization.
-                                        </CardText>
-                                    <div className="badge-holder">
-                                        <Badge pill>Node</Badge>
-                                        <Badge pill>React</Badge>
-                                        <Badge pill>Jekyll</Badge>
-                                        <Badge pill>Bootstrap</Badge>
-                                        <Badge pill>Sass</Badge>
-                                    </div>
-                                </CardBlock>
-                            </a>
-                        </Card>
-                        <Card>
-                            <a href="https://github.com/wimmalab/iotitude" target="_blank" rel="noopener noreferrer">
-                                <CardImg top width="100%" src={IoT} alt="Iotitude" />
-                                <CardBlock>
-                                    <CardTitle>IoTitude</CardTitle>
-                                    <CardText>Data visualization using IoTitude's REST API. This small project was done during WIMMA Lab 
-                                        by request of virtual company IoTitude for demoing their IoT product.</CardText>
-                                    <div className="badge-holder">
-                                        <Badge pill>Node</Badge>
-                                        <Badge pill>React</Badge>
-                                        <Badge pill>ChartJS</Badge>
-                                        <Badge pill>Sass</Badge>
-                                        <Badge pill>Material UI</Badge>
-                                    </div>
-                                </CardBlock>
-                            </a>
-                        </Card>
-                        <Card className="special-card">
+                <div className="container projects-container">
+                    <h1>Projects</h1>
+                    <Card className="projects-container__card">
+                        <a href="https://zero-tasks-dev.herokuapp.com" target="_blank" rel="noopener noreferrer">
                             <CardBlock>
-                                <CardTitle>More on...</CardTitle>
-                                <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer">
-                                    <span className="devicons devicons-github_badge" />
-                                </a>
+                                <CardTitle>Zero Tasks</CardTitle>
+                                <CardText>
+                                    A task manager / notes app for my personal taste. NoSQL REST backend (MongoDb, Node,
+                                    Express) with different frontend endpoints in mind (initially web with React and
+                                    eventually plans for mobile app with React Native). JWT authentication, expandable
+                                    with Google Auth later. Frontend is build with popular React workflow (Redux,
+                                    Redux-Saga).
+                                    <br />
+                                    <br />
+                                    Sort of a playground of a project to expand on later, this is a continuos WIP. Was
+                                    on hold for over a year since summer of 2018.
+                                </CardText>
+                                <div className="badge-holder">
+                                    <Badge pill>React</Badge>
+                                    <Badge pill>MongoDb</Badge>
+                                    <Badge pill>Node</Badge>
+                                    <Badge pill>Express</Badge>
+                                    <Badge pill>JWT</Badge>
+                                </div>
                             </CardBlock>
-                        </Card>
-                    </CardColumns>
+                        </a>
+                    </Card>
+                    <Card className="projects-container__card placeholder">
+                        <CardBlock>
+                            <CardTitle>More to come...</CardTitle>
+                            <CardText>
+                                Might be some awfully unpresentable stuff on{' '}
+                                <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer">
+                                    GitHub
+                                </a>
+                                .
+                            </CardText>
+                        </CardBlock>
+                    </Card>
                 </div>
             </section>
         );

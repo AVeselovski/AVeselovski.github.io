@@ -12,17 +12,27 @@ body {
     font-size: $base__font-size;
     line-height: ($base__line/$base__font-size);
     font-weight: $font-weight--light;
-    background: $color--main-dark;
-    color: $color--main-light;
+    background: lighten($lightestGrey, 10);
+    color: $darkerGrey;
     min-height: 100vh;
     overflow-x: hidden;
 }
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     margin: 0;
+}
+h1 {
+    font-size: $font-size--big;
+}
+h2 {
+    font-size: $font-size--1;
 }
 .wrapper {
     width: 100%;
-    transition: $transition--nav;
+    transition: $transition;
 }
 .fade-enter {
     opacity: 0;
@@ -31,12 +41,12 @@ h1, h2, h3, h4, p {
 .fade-enter-active {
     opacity: 1;
     transform: scale(1);
-    transition: .3s ease all;
+    transition: 0.3s ease all;
 }
 .fade-leave {
     opacity: 1;
 }
 .fade-leave-active {
     opacity: 0;
-    transition: .3s ease all;
+    transition: 0.3s ease all;
 }

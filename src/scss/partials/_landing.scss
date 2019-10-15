@@ -4,126 +4,97 @@
 
 .landing {
     @include basic-layout;
-    @media (min-width: 768px) {
-        padding-top: 0;
-        padding-bottom: 0; 
-    }
-    .mobile-wrap {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        a {
-            cursor: pointer;
-            text-decoration: none;
-            color: $color--main-light;
-            margin: $gutter--rem-2 auto;
-        }
+
+    .landing-container-mobile {
         h1 {
-            font-size: $font-size--2;
-            font-weight: $font-weight--light;
-            margin-top: $gutter--rem-2;
-            margin-bottom: $gutter--rem-2;
-            text-align: center;
+            font-size: em(40px);
+            font-weight: $font-weight--thin;
+            margin-bottom: $spacing-lg;
+            text-align: right;
         }
-        h2 {
-            font-size: $font-size--3;
-            font-weight: $font-weight--light;
-            margin-top: $gutter--rem-2;
-            margin-bottom: $gutter--rem-2;
-            text-align: center;
+
+        hr {
+            border-top: 2px solid $grey;
+            margin-bottom: $spacing-lg;
         }
-        .box {
-            width: em(260px);
-            text-align: center;
-            padding: $gutter--rem-1;
-            font-size: $font-size--3;
-            border: solid 2px $color--main-light;
+
+        &__box {
+            cursor: pointer;
+            display: block;
+            margin-bottom: $spacing-md;
+            transition: padding $transition;
+            width: auto;
+
+            h2 {
+                font-size: em(22px);
+            }
+            p {
+                font-size: $font-size--small;
+            }
+
+            &:hover {
+                padding-left: $spacing-sm;
+            }
+
+            &--disabled {
+                color: $grey !important;
+                pointer-events: none;
+
+                h2 {
+                    font-size: em(22px);
+                }
+                p {
+                    font-size: $font-size--small;
+                }
+            }
         }
     }
-    .desktop-wrap {
-        width: 768px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 0 auto;
-        a {
+
+    .landing-container-desktop {
+        max-width: 992px;
+
+        h1 {
+            color: $darkGrey;
+            font-size: $font-size--big;
+            font-weight: $font-weight--thin;
+            margin-bottom: $spacing-lg;
+            text-align: right;
+        }
+
+        hr {
+            border-top: 2px solid $grey;
+            margin-bottom: $spacing-lg;
+        }
+
+        &__box {
             cursor: pointer;
-            text-decoration: none;
-            color: $color--main-light;
-            margin: $gutter--rem-2;
-        }
-        .title-holder {
             display: block;
-            width: em(700px);
-            margin: $gutter--rem-2 auto;
-            text-align: center;
-            height: em(215px);
-            border: solid 2px $color--main-medium;
-            padding: $gutter--rem-1 $gutter--rem-1;
-            h1 {
-                font-size: $font-size--1;
-                font-weight: $font-weight--light;
-                color: $color--main-light;
-                margin-top: 9px;
-            }
+            margin-bottom: $spacing-md;
+            transition: padding $transition;
+            width: auto;
+
             h2 {
-                font-size: $font-size--2;
-                font-weight: $font-weight--light;
-                color: $color--main-medium;
-            }
-            h3 {
-                font-size: em(64px);
-                font-weight: $font-weight--thin;
-                color: $color--main-color;
-            }
-        }
-        .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: em(215px, 23px);
-            height: em(215px, 23px);
-            text-align: center;
-            font-size: $font-size--2;
-            border: solid 2px $color--main-light;
-            transition: $transition--landing;
-            span {
-                transition: $transition--landing;
-            }
-            &:hover {
-                border-color: $color--main-light-accent;
-                background-color: $color--main-light-accent;
-                span {
-                    color: $color--main-dark;
-                }
-            }
-        }
-        .box-social {
-            width: em(215px, 23px);
-            height: em(215px, 23px);
-            color: $color--main-medium;
-            border: solid 2px $color--main-medium;
-            svg {
+                color: $darkGrey;
                 font-size: $font-size--1;
             }
-            &:hover {
-                border-color: $color--main-light-accent;
-                background-color: $color--main-dark;
-                span {
-                    transform: scale(1);
-                    color: $color--main-light-accent;
-                }
+            p {
+                font-size: $font-size--3;
             }
-        }
-        .box-img {
-            margin: $gutter--rem-2;
-            border: solid 2px $color--main-medium;
-            background-image: url('../assets/face.png');
-            background-size: contain;
+
             &:hover {
-                border: solid 2px $color--main-medium;
-                background-color: $color--main-dark;
+                padding-left: $spacing-sm;
+            }
+
+            &--disabled {
+                color: $grey !important;
+                pointer-events: none;
+
+                h2 {
+                    font-size: $font-size--1;
+                }
+                p {
+                    font-size: $font-size--3;
+                }
             }
         }
     }
