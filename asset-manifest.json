@@ -1,13 +1,7 @@
 {
-  "main.css": "static/css/main.291ddd8e.css",
-  "main.css.map": "static/css/main.291ddd8e.css.map",
-  "main.js": "static/js/main.2e34cf9f.js",
-  "main.js.map": "static/js/main.2e34cf9f.js.map",
-  "static\\media\\devicons.eot?xqxft6": "static/media/devicons.36c5ab93.eot",
-  "static\\media\\devicons.svg?xqxft6": "static/media/devicons.a21d3c63.svg",
-  "static\\media\\devicons.ttf?xqxft6": "static/media/devicons.5ed4d646.ttf",
-  "static\\media\\devicons.woff?xqxft6": "static/media/devicons.a8639dec.woff",
-  "static\\media\\dynamic-todo-1.png": "static/media/dynamic-todo-1.cff1f40e.png",
-  "static\\media\\face.png": "static/media/face.f45be322.png",
-  "static\\media\\iotitude-2.png": "static/media/iotitude-2.e6064801.png"
+  "main.css": "static/css/main.e8cc0edc.css",
+  "main.css.map": "static/css/main.e8cc0edc.css.map",
+  "main.js": "static/js/main.381951c8.js",
+  "main.js.map": "static/js/main.381951c8.js.map",
+  "static/media/face.jpg": "static/media/face.2d02e8f3.jpg"
 }

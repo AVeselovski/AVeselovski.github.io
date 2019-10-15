@@ -1,0 +1,15 @@
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet" transform="translate(-150.000000, -350.000000)">
+            <g id="Group" transform="translate(150.000000, 350.000000)">
+                <rect id="Rectangle" fill="#202124" x="0" y="0" width="400" height="400"></rect>
+                <text id="V" font-family="Roboto-Regular, Roboto" font-size="300" font-weight="normal" fill="#D8D8D8">
+                    <tspan x="176.06543" y="302">V</tspan>
+                </text>
+                <text id="A" font-family="Roboto-Regular, Roboto" font-size="300" font-weight="normal" fill="#D8D8D8">
+                    <tspan x="33.6484375" y="303">A</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
