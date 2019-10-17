@@ -1,5 +1,6 @@
 // libs
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // assets
@@ -62,13 +63,13 @@ export default class Nav extends React.Component {
                         transitionEnterTimeout={350}
                         transitionLeaveTimeout={350}
                     >
-                        {this.props.activePage !== 'landing' && (
+                        {this.props.location.pathname !== '/' && (
                             <span className="back-btn">
-                                <a onClick={() => this.updatePage('landing')}>
+                                <Link to="/">
                                     <svg width="30" height="16">
                                         <path d="M2,14 15,2 28,14" strokeWidth="3" strokeLinecap="round" fill="none" />
                                     </svg>
-                                </a>
+                                </Link>
                             </span>
                         )}
                     </ReactCSSTransitionGroup>
@@ -83,7 +84,8 @@ export default class Nav extends React.Component {
                     {this.props.isMobile && (
                         <ul className="mobile-nav-ul">
                             <li>
-                                <a
+                                <Link
+                                    to="/about"
                                     onClick={() => this.updatePage('about')}
                                     style={
                                         this.props.activePage === 'about'
@@ -95,10 +97,11 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
+                                    to="/projects"
                                     onClick={() => this.updatePage('projects')}
                                     style={
                                         this.props.activePage === 'projects'
@@ -110,10 +113,11 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     Projects
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
+                                    to="/skills"
                                     onClick={() => this.updatePage('cv')}
                                     style={
                                         this.props.activePage === 'cv'
@@ -125,14 +129,15 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     Skills & Experience
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     )}
                     {!this.props.isMobile && (
                         <ul className="desktop-nav-ul">
                             <li>
-                                <a
+                                <Link
+                                    to="/about"
                                     onClick={() => this.updatePage('about')}
                                     style={
                                         this.props.activePage === 'about'
@@ -145,10 +150,11 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
+                                    to="/projects"
                                     onClick={() => this.updatePage('projects')}
                                     style={
                                         this.props.activePage === 'projects'
@@ -161,10 +167,11 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     Projects
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
+                                    to="/skills"
                                     onClick={() => this.updatePage('cv')}
                                     style={
                                         this.props.activePage === 'cv'
@@ -177,7 +184,7 @@ export default class Nav extends React.Component {
                                     }
                                 >
                                     Skills & Experience
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     )}
@@ -201,6 +208,7 @@ export default class Nav extends React.Component {
 }
 
 Nav.propTypes = {
+    location: PropTypes.object.isRequired,
     updatePage: PropTypes.func.isRequired,
     activePage: PropTypes.string.isRequired,
     slideOff: PropTypes.func.isRequired,

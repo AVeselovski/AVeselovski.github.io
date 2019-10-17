@@ -1,5 +1,6 @@
 // libs
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export default class Landing extends React.Component {
@@ -20,18 +21,30 @@ export default class Landing extends React.Component {
                             <br /> Developer
                         </h1>
                         <hr></hr>
-                        <a onClick={() => this.updatePage('about')} className="landing-container-mobile__box">
+                        <Link
+                            to="/about"
+                            onClick={() => this.updatePage('about')}
+                            className="landing-container-mobile__box"
+                        >
                             <h2>About</h2>
                             <p>Very little about me</p>
-                        </a>
-                        <a onClick={() => this.updatePage('projects')} className="landing-container-mobile__box">
+                        </Link>
+                        <Link
+                            to="/projects"
+                            onClick={() => this.updatePage('projects')}
+                            className="landing-container-mobile__box"
+                        >
                             <h2>Projects</h2>
                             <p>Little personal projects</p>
-                        </a>
-                        <a onClick={() => this.updatePage('cv')} className="landing-container-mobile__box">
+                        </Link>
+                        <Link
+                            to="/skills"
+                            onClick={() => this.updatePage('cv')}
+                            className="landing-container-mobile__box"
+                        >
                             <h2>Skills & Experience</h2>
                             <p>Might be interesting to know</p>
-                        </a>
+                        </Link>
                         <a onClick={() => {}} className="landing-container-mobile__box--disabled">
                             <h2>Styleguide</h2>
                             <p>My personal component library</p>
@@ -45,18 +58,30 @@ export default class Landing extends React.Component {
                             Software Developer
                         </h1>
                         <hr></hr>
-                        <a onClick={() => this.updatePage('about')} className="landing-container-desktop__box">
+                        <Link
+                            to="/about"
+                            onClick={() => this.updatePage('about')}
+                            className="landing-container-desktop__box"
+                        >
                             <h2>About</h2>
                             <p>Very little about me</p>
-                        </a>
-                        <a onClick={() => this.updatePage('projects')} className="landing-container-desktop__box">
+                        </Link>
+                        <Link
+                            to="/projects"
+                            onClick={() => this.updatePage('projects')}
+                            className="landing-container-desktop__box"
+                        >
                             <h2>Projects</h2>
                             <p>Little personal projects</p>
-                        </a>
-                        <a onClick={() => this.updatePage('cv')} className="landing-container-desktop__box">
+                        </Link>
+                        <Link
+                            to="/skills"
+                            onClick={() => this.updatePage('cv')}
+                            className="landing-container-desktop__box"
+                        >
                             <h2>Skills & Experience</h2>
                             <p>Might be interesting to know</p>
-                        </a>
+                        </Link>
                         <a onClick={() => {}} className="landing-container-desktop__box--disabled">
                             <h2>Styleguide</h2>
                             <p>My personal component library</p>

@@ -1,15 +1,16 @@
 // libs
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Route, withRouter } from 'react-router-dom';
 // components
 import Nav from './Nav';
+import Page from './Page';
 import Landing from './Landing';
 import About from './About';
 import Projects from './Projects';
 import CV from './CV';
 import Meta from './Meta';
 
-export default class App extends React.Component {
+class App extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -60,6 +61,7 @@ export default class App extends React.Component {
             <div>
                 <Meta />
                 <Nav
+                    location={this.props.location}
                     updatePage={this.updatePage}
                     activePage={this.state.page}
                     slideOff={this.slideOff}
@@ -67,16 +69,39 @@ export default class App extends React.Component {
                     isMobile={this.state.isMobile}
                 />
                 <div className="wrapper" style={{ marginLeft: this.state.slide }}>
-                    <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={350} transitionLeave={false}>
-                        {this.state.page === 'landing' && (
+                    <Route
+                        exact
+                        path="/"
+                        component={Page(() => (
                             <Landing isMobile={this.state.isMobile} updatePage={this.updatePage} />
-                        )}
-                        {this.state.page === 'about' && <About />}
-                        {this.state.page === 'projects' && <Projects />}
-                        {this.state.page === 'cv' && <CV />}
-                    </ReactCSSTransitionGroup>
+                        ))}
+                    />
+                    <Route exact path="/about" component={Page(About)} />
+                    <Route exact path="/projects" component={Page(Projects)} />
+                    <Route exact path="/skills" component={Page(CV)} />
                 </div>
+                {/**
+                    <TransitionGroup>
+                        <CSSTransition
+                            key={location.key}
+                            timeout={{ enter: 350, exit: 350 }}
+                            classNames="fade">
+                            <div className="wrapper">
+                                <Switch location={location}>
+                                    <Route exact path="/" component={() =>
+                                        <Landing isMobile={this.state.isMobile} updatePage={this.updatePage} />
+                                    } />
+                                    <Route path="/first" component={About} />
+                                    <Route path="/second" component={Projects} />
+                                    <Route path="/third" component={CV} />
+                                </Switch>
+                            </div>
+                        </CSSTransition>
+                    </TransitionGroup>
+                */}
             </div>
         );
     }
 }
+
+export default withRouter(App);

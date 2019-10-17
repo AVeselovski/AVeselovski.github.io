@@ -19,9 +19,11 @@
         }
 
         &__box {
+            color: inherit;
             cursor: pointer;
             display: block;
             margin-bottom: $spacing-md;
+            text-decoration: none;
             transition: padding $transition;
             width: auto;
 
@@ -67,9 +69,11 @@
         }
 
         &__box {
+            color: inherit;
             cursor: pointer;
             display: block;
             margin-bottom: $spacing-md;
+            text-decoration: none;
             transition: padding $transition;
             width: auto;
 
