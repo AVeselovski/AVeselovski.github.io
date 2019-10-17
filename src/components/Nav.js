@@ -65,7 +65,7 @@ export default class Nav extends React.Component {
                     >
                         {this.props.location.pathname !== '/' && (
                             <span className="back-btn">
-                                <Link to="/">
+                                <Link to="/" onClick={() => this.updatePage('landing')}>
                                     <svg width="30" height="16">
                                         <path d="M2,14 15,2 28,14" strokeWidth="3" strokeLinecap="round" fill="none" />
                                     </svg>

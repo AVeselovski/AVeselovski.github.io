@@ -21,8 +21,8 @@ export default class Projects extends React.Component {
                                     Redux-Saga).
                                     <br />
                                     <br />
-                                    Sort of a playground of a project to expand on later, this is a continuos WIP. Was
-                                    on hold for over a year since summer of 2018.
+                                    Just a glorified ToDo app, nothing more. Sort of a playground of a project to
+                                    possibly expand on later, a.k.a continuos WIP.
                                 </CardText>
                                 <div className="badge-holder">
                                     <Badge pill>React</Badge>
@@ -38,7 +38,7 @@ export default class Projects extends React.Component {
                         <CardBlock>
                             <CardTitle>More to come...</CardTitle>
                             <CardText>
-                                Might be some awfully unpresentable stuff on{' '}
+                                Might be something unpresentable on{' '}
                                 <a href="https://github.com/AVeselovski" target="_blank" rel="noopener noreferrer">
                                     GitHub
                                 </a>

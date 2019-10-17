@@ -1,13 +1,14 @@
 // libs
 import React from 'react';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 // components
 import Nav from './Nav';
-import Page from './Page';
 import Landing from './Landing';
 import About from './About';
 import Projects from './Projects';
 import CV from './CV';
+import NotFound from './NotFound';
 import Meta from './Meta';
 
 class App extends React.Component {
@@ -68,37 +69,29 @@ class App extends React.Component {
                     slideIn={this.slideIn}
                     isMobile={this.state.isMobile}
                 />
-                <div className="wrapper" style={{ marginLeft: this.state.slide }}>
-                    <Route
-                        exact
-                        path="/"
-                        component={Page(() => (
-                            <Landing isMobile={this.state.isMobile} updatePage={this.updatePage} />
-                        ))}
-                    />
-                    <Route exact path="/about" component={Page(About)} />
-                    <Route exact path="/projects" component={Page(Projects)} />
-                    <Route exact path="/skills" component={Page(CV)} />
-                </div>
-                {/**
-                    <TransitionGroup>
-                        <CSSTransition
-                            key={location.key}
-                            timeout={{ enter: 350, exit: 350 }}
-                            classNames="fade">
-                            <div className="wrapper">
-                                <Switch location={location}>
-                                    <Route exact path="/" component={() =>
+                <TransitionGroup>
+                    <CSSTransition
+                        key={this.props.location.pathname}
+                        timeout={{ enter: 350, exit: 350 }}
+                        classNames="fade"
+                    >
+                        <div className="wrapper">
+                            <Switch>
+                                <Route
+                                    exact
+                                    path="/"
+                                    component={() => (
                                         <Landing isMobile={this.state.isMobile} updatePage={this.updatePage} />
-                                    } />
-                                    <Route path="/first" component={About} />
-                                    <Route path="/second" component={Projects} />
-                                    <Route path="/third" component={CV} />
-                                </Switch>
-                            </div>
-                        </CSSTransition>
-                    </TransitionGroup>
-                */}
+                                    )}
+                                />
+                                <Route path="/about" component={About} />
+                                <Route path="/projects" component={Projects} />
+                                <Route path="/skills" component={CV} />
+                                <Route component={NotFound} />
+                            </Switch>
+                        </div>
+                    </CSSTransition>
+                </TransitionGroup>
             </div>
         );
     }
