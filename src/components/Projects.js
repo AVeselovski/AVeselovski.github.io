@@ -12,7 +12,9 @@ export default class Projects extends React.Component {
                     <Card className="projects-container__card">
                         <a href="https://zero-tasks-dev.herokuapp.com" target="_blank" rel="noopener noreferrer">
                             <CardBlock>
-                                <CardTitle>Zero Tasks</CardTitle>
+                                <CardTitle>
+                                    <a>Zero Tasks</a>
+                                </CardTitle>
                                 <CardText>
                                     A task manager / notes app for my personal taste. NoSQL REST backend (MongoDb, Node,
                                     Express) with different frontend endpoints in mind (initially web with React and
@@ -21,8 +23,9 @@ export default class Projects extends React.Component {
                                     Redux-Saga).
                                     <br />
                                     <br />
-                                    Just a glorified ToDo app, nothing more. Sort of a playground of a project to
-                                    possibly expand on later, a.k.a continuos WIP.
+                                    Just a classic ToDo app, primarily to act as a "show of skill", if nothing else. Do
+                                    try it. Preferably with Chrome. You can use a test user:
+                                    "test1@example.com:password" or create your own.
                                 </CardText>
                                 <div className="badge-holder">
                                     <Badge pill>React</Badge>

@@ -23,14 +23,13 @@ export default class About extends React.Component {
                         <p>
                             Hi, my name is Artur. I'm a software developer with 2+ years of frontend developement
                             experience in agile development teams. While my focus is on frontend development, I'm not
-                            totally lost when it comes to full-stack development. I like designing and building stuff
-                            (that's why I'm in software development after all!). I also make attempts at UI design in my
-                            own time, but I’m not a designer by a long shot, I just like to dabble. Good enough for me,
-                            maybe not so much for real world apps.
+                            totally lost when it comes to full-stack development. I also make some attempts at UI design
+                            in my free time, but I’m not a designer by a long shot, I just like to dabble. Good enough
+                            for me, not so much for real world apps.
                             <br />
                             <br />
                             Still a student, studying Media Technology at Jyväskylä University of Applied Sciences
-                            (JAMK). Currently bachelor's thesis away from graduating.
+                            (JAMK), bachelor's thesis away from graduating.
                         </p>
                     </div>
                 </div>

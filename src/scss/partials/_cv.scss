@@ -55,7 +55,7 @@
             text-align: center;
 
             a {
-                color: $darkGrey;
+                color: darken($green, 10);
                 font-size: $font-size--big;
             }
         }

@@ -8,7 +8,7 @@
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  line-height: 1.3571428571;
+  line-height: 1.5;
   font-weight: 300;
   background: #f2f2f2;
   color: #202124;
@@ -343,6 +343,7 @@ h2 {
           width: 300px; } }
     .about .about-container__basic-info {
       font-size: 1.2142857143em;
+      margin-bottom: 2.2857142857rem;
       text-align: left; }
       @media (min-width: 768px) {
         .about .about-container__basic-info {
@@ -414,6 +415,8 @@ h2 {
       font-weight: 400;
       margin-bottom: 1.1428571429rem;
       text-decoration: underline; }
+      .projects .card .card-title a {
+        color: #449d44; }
       @media (min-width: 768px) {
         .projects .card .card-title {
           color: #323639;
@@ -532,7 +535,7 @@ h2 {
   .skills .skills-container .icon-container {
     text-align: center; }
     .skills .skills-container .icon-container a {
-      color: #323639;
+      color: #449d44;
       font-size: 3.5714285714em; }
 
 /*# sourceMappingURL=index.min.css.map */
