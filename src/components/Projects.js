@@ -23,9 +23,8 @@ export default class Projects extends React.Component {
                                     Redux-Saga).
                                     <br />
                                     <br />
-                                    Just a classic ToDo app, primarily to act as a "show of skill", if nothing else. Do
-                                    try it. Preferably with Chrome. You can use a test user:
-                                    "test1@example.com:password" or create your own.
+                                    Just a classic ToDo app, primarily to act as a "show of skill", if nothing else.
+                                    Test user: "test1@example.com:password". Real email not required for creating users.
                                 </CardText>
                                 <div className="badge-holder">
                                     <Badge pill>React</Badge>

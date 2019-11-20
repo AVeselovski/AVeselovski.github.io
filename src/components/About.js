@@ -14,8 +14,8 @@ export default class About extends React.Component {
                     </div>
                     <p className="about-container__current-status">
                         Currently working as a software developer at{' '}
-                        <a href="https://meiko.fi" target="_blank" rel="noopener noreferrer">
-                            Meiko
+                        <a href="https://www.qvantel.com/" target="_blank" rel="noopener noreferrer">
+                            Qvantel
                         </a>
                         .
                     </p>
