@@ -3,119 +3,125 @@
 // ======================================
 
 .projects {
-    @include basic-layout;
+  @include basic-layout;
 
-    justify-content: flex-start;
-    padding-bottom: 0;
+  justify-content: flex-start;
+  padding-bottom: 0;
+
+  @media (min-width: 768px) {
+    padding-bottom: $spacing-lg;
+  }
+
+  .projects-container {
+    @media (min-width: 768px) {
+      max-width: 768px;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 992px;
+    }
+  }
+
+  h1 {
+    color: $darkGrey;
+    font-size: em(40px);
+    font-weight: $font-weight--medium;
+    margin-bottom: $spacing-lg;
+    text-align: right;
+
+    @media (min-width: 376px) {
+      font-size: $font-size--big;
+    }
+  }
+
+  .card {
+    background-color: transparent;
+    border: none;
+    border: 2px solid $darkGrey;
+    border-radius: 3px;
+    margin-bottom: $spacing-md;
+
+    .card-block {
+      padding: $spacing-sm;
+      padding-top: $spacing-md;
+    }
 
     @media (min-width: 768px) {
-        padding-bottom: $spacing-lg;
+      border: 2px solid $darkGrey;
+      border-radius: 3px;
+
+      .card-block {
+        padding: $spacing-md;
+      }
     }
 
-    .projects-container {
-        @media (min-width: 768px) {
-            max-width: 768px;
-        }
+    .card-title {
+      font-size: em(22px);
+      font-weight: $font-weight--medium;
+      margin-bottom: $spacing-md;
 
-        @media (min-width: 992px) {
-            max-width: 992px;
-        }
-    }
+      a {
+        color: $blue;
+      }
 
-    h1 {
+      @media (min-width: 768px) {
         color: $darkGrey;
-        font-size: em(40px);
+        font-size: $font-size--1;
+      }
+    }
+
+    .card-text {
+      font-size: $font-size--2;
+      margin-bottom: $spacing-md;
+
+      @media (min-width: 768px) {
+        font-size: $font-size--3;
         font-weight: $font-weight--medium;
-        margin-bottom: $spacing-lg;
-        text-align: right;
-
-        @media (min-width: 376px) {
-            font-size: $font-size--big;
-        }
+      }
     }
 
-    .card {
-        background-color: transparent;
-        border: none;
-        border: 2px solid $darkGrey;
-        border-radius: 3px;
-        margin-bottom: $spacing-md;
-
-        .card-block {
-            padding: $spacing-sm;
-            padding-top: $spacing-md;
-        }
-
-        @media (min-width: 768px) {
-            border: 2px solid $darkGrey;
-            border-radius: 3px;
-
-            .card-block {
-                padding: $spacing-md;
-            }
-        }
-
-        .card-title {
-            font-size: em(22px);
-            font-weight: $font-weight--medium;
-            margin-bottom: $spacing-md;
-            text-decoration: underline;
-
-            a {
-                color: darken($green, 10);
-            }
-
-            @media (min-width: 768px) {
-                color: $darkGrey;
-                font-size: $font-size--1;
-            }
-        }
-
-        .card-text {
-            font-size: $font-size--2;
-            margin-bottom: $spacing-md;
-
-            @media (min-width: 768px) {
-                font-size: $font-size--3;
-                font-weight: $font-weight--medium;
-            }
-        }
-
-        a {
-            color: $darkerGrey;
-            text-decoration: none;
-        }
-
-        .badge-default {
-            background-color: darken($blue, 10);
-            color: lighten($lightestGrey, 10);
-            font-size: $font-size--small;
-            font-weight: $font-weight--medium;
-            margin-right: $spacing-xs;
-            margin-bottom: $spacing-xs;
-        }
-
-        transition: $transition;
-
-        &:hover {
-            background-color: $lightestGrey;
-        }
+    .badge-holder {
+      .badge {
+        margin-right: $spacing-xs;
+        padding-bottom: $spacing-xxs;
+        padding-left: $spacing-xs;
+        padding-right: $spacing-xs;
+        padding-top: $spacing-xxs;
+      }
     }
 
-    .placeholder {
-        &:hover {
-            background-color: transparent;
-        }
+    transition: $transition;
 
-        .card-title {
-            text-decoration: none;
-        }
+    .card-links {
+      padding-bottom: $spacing-sm;
 
-        .card-text {
-            a {
-                color: darken($green, 10);
-                font-weight: $font-weight--medium;
-            }
-        }
+      a {
+        color: $blue;
+        font-size: $font-size--2;
+        font-weight: $font-weight--medium;
+        margin-right: $spacing-sm;
+      }
+      a:hover,
+      a:active {
+        color: $blue;
+      }
     }
+  }
+
+  .placeholder {
+    &:hover {
+      background-color: transparent;
+    }
+
+    .card-title {
+      text-decoration: none;
+    }
+
+    .card-text {
+      a {
+        color: darken($blue, 20);
+        font-weight: $font-weight--medium;
+      }
+    }
+  }
 }

@@ -3,57 +3,57 @@
 // ======================================
 
 .about {
-    @include basic-layout;
+  @include basic-layout;
 
-    .about-container {
-        max-width: 768px;
-        text-align: center;
+  .about-container {
+    max-width: 768px;
+    text-align: center;
 
-        h1 {
-            color: $darkGrey;
-            font-size: em(40px);
-            font-weight: $font-weight--medium;
-            margin-bottom: $spacing-lg;
+    h1 {
+      color: $darkGrey;
+      font-size: em(40px);
+      font-weight: $font-weight--medium;
+      margin-bottom: $spacing-lg;
 
-            @media (min-width: 376px) {
-                font-size: $font-size--big;
-            }
-        }
-
-        &__current-status {
-            color: $darkGrey;
-            font-size: $font-size--2;
-            font-weight: $font-weight--medium;
-            margin-bottom: $spacing-lg;
-
-            a {
-                color: darken($green, 10);
-            }
-        }
-
-        &__img-container {
-            margin-bottom: $spacing-lg;
-
-            img {
-                width: 100%;
-            }
-
-            @media (min-width: 376px) {
-                img {
-                    width: 300px;
-                }
-            }
-        }
-
-        &__basic-info {
-            font-size: $font-size--2;
-            margin-bottom: $spacing-lg;
-            text-align: left;
-
-            @media (min-width: 768px) {
-                font-size: $font-size--3;
-                font-weight: $font-weight--medium;
-            }
-        }
+      @media (min-width: 376px) {
+        font-size: $font-size--big;
+      }
     }
+
+    &__current-status {
+      color: $darkGrey;
+      font-size: $font-size--2;
+      font-weight: $font-weight--medium;
+      margin-bottom: $spacing-lg;
+
+      a {
+        color: $blue;
+      }
+    }
+
+    &__img-container {
+      margin-bottom: $spacing-lg;
+
+      img {
+        width: 100%;
+      }
+
+      @media (min-width: 376px) {
+        img {
+          width: 300px;
+        }
+      }
+    }
+
+    &__basic-info {
+      font-size: $font-size--2;
+      margin-bottom: $spacing-lg;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        font-size: $font-size--3;
+        font-weight: $font-weight--medium;
+      }
+    }
+  }
 }

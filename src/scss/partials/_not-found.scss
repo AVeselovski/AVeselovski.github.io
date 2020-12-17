@@ -3,18 +3,18 @@
 // ======================================
 
 .not-found {
-    @include basic-layout;
+  @include basic-layout;
 
-    text-align: center;
+  text-align: center;
 
-    h1 {
-        color: $darkGrey;
-        font-size: em(40px);
-        font-weight: $font-weight--medium;
-        margin-bottom: $spacing-lg;
+  h1 {
+    color: $darkGrey;
+    font-size: em(40px);
+    font-weight: $font-weight--medium;
+    margin-bottom: $spacing-lg;
 
-        @media (min-width: 376px) {
-            font-size: $font-size--big;
-        }
+    @media (min-width: 376px) {
+      font-size: $font-size--big;
     }
+  }
 }

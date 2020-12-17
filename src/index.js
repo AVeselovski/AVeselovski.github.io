@@ -9,8 +9,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 require('./css/index.min.css');
 
 ReactDOM.render(
-    <HashRouter basename="/">
-        <App />
-    </HashRouter>,
-    document.getElementById('app')
+  <HashRouter basename="/">
+    <App />
+  </HashRouter>,
+  document.getElementById('app')
 );

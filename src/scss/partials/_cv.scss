@@ -3,61 +3,62 @@
 // ======================================
 
 .skills {
-    @include basic-layout;
+  @include basic-layout;
 
-    .skills-container {
-        h1 {
-            color: $darkGrey;
-            font-size: em(40px);
-            font-weight: $font-weight--medium;
-            margin-bottom: $spacing-lg;
+  .skills-container {
+    h1 {
+      color: $darkGrey;
+      font-size: em(40px);
+      font-weight: $font-weight--medium;
+      margin-bottom: $spacing-lg;
 
-            @media (min-width: 376px) {
-                font-size: $font-size--big;
-            }
-        }
-
-        p {
-            font-size: $font-size--2;
-            margin-bottom: $spacing-lg;
-            text-align: left;
-
-            @media (min-width: 768px) {
-                font-size: $font-size--3;
-                font-weight: $font-weight--medium;
-            }
-        }
-
-        .badge-holder {
-            margin-bottom: $spacing-xl;
-        }
-
-        .badge-default {
-            background-color: darken($blue, 10);
-            color: lighten($lightestGrey, 10);
-            font-size: $font-size--small;
-            font-weight: $font-weight--medium;
-            margin-right: $spacing-xs;
-            margin-bottom: $spacing-xs;
-        }
-
-        h2 {
-            font-size: em(22px);
-            text-align: center;
-
-            @media (min-width: 768px) {
-                font-size: $font-size--1;
-                font-weight: $font-weight--medium;
-            }
-        }
-
-        .icon-container {
-            text-align: center;
-
-            a {
-                color: darken($green, 10);
-                font-size: $font-size--big;
-            }
-        }
+      @media (min-width: 376px) {
+        font-size: $font-size--big;
+      }
     }
+
+    p {
+      font-size: $font-size--2;
+      margin-bottom: $spacing-lg;
+      text-align: left;
+
+      @media (min-width: 768px) {
+        font-size: $font-size--3;
+        font-weight: $font-weight--medium;
+      }
+    }
+
+    .badge-holder {
+      margin-bottom: $spacing-xl;
+
+      .badge {
+        font-size: $font-size--3;
+        margin-bottom: $spacing-xs;
+        margin-right: $spacing-xs;
+        padding-bottom: $spacing-xs;
+        padding-left: $spacing-sm;
+        padding-right: $spacing-sm;
+        padding-top: $spacing-xs;
+      }
+    }
+
+    h2 {
+      font-size: em(22px);
+      text-align: center;
+
+      @media (min-width: 768px) {
+        font-size: $font-size--1;
+        font-weight: $font-weight--medium;
+      }
+    }
+
+    .icon-container {
+      text-align: center;
+
+      a {
+        color: $blue;
+        font-size: $font-size--big;
+      }
+    }
+  }
 }

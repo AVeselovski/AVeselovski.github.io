@@ -3,178 +3,178 @@
 // ======================================
 
 .header-nav {
-    height: 80px;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+  height: 80px;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 
-    a {
-        color: $darkGrey;
-        stroke: $darkGrey;
-        text-decoration: none;
-        transition: $transition;
+  a {
+    color: $darkGrey;
+    stroke: $darkGrey;
+    text-decoration: none;
+    transition: $transition;
 
-        &:hover {
-            color: $darkerGrey;
-            stroke: $darkerGrey;
-        }
+    &:hover {
+      color: $darkerGrey;
+      stroke: $darkerGrey;
     }
+  }
 
-    .back-btn {
-        cursor: pointer;
-        float: right;
-        height: 30px;
-        margin-right: 16px;
-        margin-top: 24px;
-        padding-top: 4px;
-        width: 30px;
-    }
+  .back-btn {
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    margin-right: 16px;
+    margin-top: 24px;
+    padding-top: 4px;
+    width: 30px;
+  }
 }
 
 .btn-menu {
-    cursor: pointer;
-    height: 30px;
-    left: 16px;
-    position: fixed;
-    top: 24px;
-    transition: $transition;
-    width: 30px;
+  cursor: pointer;
+  height: 30px;
+  left: 16px;
+  position: fixed;
+  top: 24px;
+  transition: $transition;
+  width: 30px;
 }
 .btn-menu.open {
-    cursor: default;
-    opacity: 0;
-    pointer-events: none;
-    transform: rotate(90deg);
+  cursor: default;
+  opacity: 0;
+  pointer-events: none;
+  transform: rotate(90deg);
 
-    @media screen and (min-width: 768px) {
-        left: 256px;
-        opacity: 0.25;
-    }
+  @media screen and (min-width: 768px) {
+    left: 256px;
+    opacity: 0.25;
+  }
 }
 
 .side-nav {
-    background-color: $lightestGrey;
-    bottom: 0;
-    color: $darkGrey;
-    height: 120%;
-    left: 0;
-    left: -100%;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    transition: $transition;
-    width: 100%;
-    z-index: 1;
+  background-color: $lightestGrey;
+  bottom: 0;
+  color: $darkGrey;
+  height: 120%;
+  left: 0;
+  left: -100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  transition: $transition;
+  width: 100%;
+  z-index: 1;
 
-    @media screen and (min-width: 768px) {
-        background-color: $darkerGrey;
-        color: $lightGrey;
-        left: -240px;
-        transition: left 350ms cubic-bezier(0.23, 1, 0.32, 1);
-        width: 240px;
-    }
+  @media screen and (min-width: 768px) {
+    background-color: $darkerGrey;
+    color: $lightGrey;
+    left: -240px;
+    transition: left 350ms cubic-bezier(0.23, 1, 0.32, 1);
+    width: 240px;
+  }
 
-    .mobile-nav-ul {
-        font-size: $font-size--2;
-        font-weight: $font-weight--medium;
-        list-style: none;
-        margin-top: em(70px);
-
-        a {
-            border-bottom: 2px solid $lightestGrey;
-            cursor: pointer;
-            display: block;
-            margin: 0 auto;
-            padding: $spacing-md 0 $spacing-xs 0;
-            text-align: center;
-            text-decoration: none;
-            width: em(80px);
-        }
-    }
-
-    .desktop-nav-ul {
-        font-size: $font-size--3;
-        font-weight: $font-weight--medium;
-        list-style: none;
-        margin-top: em(70px);
-
-        a {
-            cursor: pointer;
-            display: block;
-            margin: 0;
-            padding: $spacing-md 0 $spacing-md 30px;
-            text-decoration: none;
-            transition: border-left $transition, color $transition, padding $transition;
-
-            &:hover {
-                border-left: 4px solid $lightGrey;
-                color: lighten($lightestGrey, 10);
-                padding-left: 34px;
-            }
-        }
-    }
+  .mobile-nav-ul {
+    font-size: $font-size--2;
+    font-weight: $font-weight--medium;
+    list-style: none;
+    margin-top: em(70px);
 
     a {
-        color: $darkGrey;
-        stroke: $darkGrey;
-        transition: $transition;
+      border-bottom: 2px solid $lightestGrey;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      padding: $spacing-md 0 $spacing-xs 0;
+      text-align: center;
+      text-decoration: none;
+      width: em(80px);
+    }
+  }
 
-        &:hover {
-            color: $darkerGrey;
-            stroke: $darkerGrey;
-        }
+  .desktop-nav-ul {
+    font-size: $font-size--3;
+    font-weight: $font-weight--medium;
+    list-style: none;
+    margin-top: em(70px);
 
-        @media (min-width: 768px) {
-            color: $lightestGrey;
-            stroke: $lightestGrey;
+    a {
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: $spacing-md 0 $spacing-md 30px;
+      text-decoration: none;
+      transition: border-left $transition, color $transition, padding $transition;
 
-            &:hover {
-                color: lighten($lightestGrey, 10);
-                stroke: lighten($lightestGrey, 10);
-            }
-        }
+      &:hover {
+        border-left: 4px solid $lightGrey;
+        color: lighten($lightestGrey, 10);
+        padding-left: 34px;
+      }
+    }
+  }
+
+  a {
+    color: $darkGrey;
+    stroke: $darkGrey;
+    transition: $transition;
+
+    &:hover {
+      color: $darkerGrey;
+      stroke: $darkerGrey;
     }
 
-    .info {
-        bottom: 20%;
-        position: absolute;
-        text-align: center;
-        width: 100%;
+    @media (min-width: 768px) {
+      color: $lightestGrey;
+      stroke: $lightestGrey;
 
-        p {
-            font-size: $font-size--small;
-            font-weight: $font-weight--medium;
-            margin: 0;
-        }
-
-        .icon-holder {
-            margin-bottom: $spacing-sm;
-
-            a {
-                stroke: none;
-                text-decoration: none;
-            }
-            svg {
-                display: inline-block;
-                font-size: em(36px);
-            }
-        }
-
-        // workaround for landscape phone EDIT: what?
-        @media (max-width: 767px) and (orientation: landscape) {
-            display: none;
-        }
+      &:hover {
+        color: lighten($lightestGrey, 10);
+        stroke: lighten($lightestGrey, 10);
+      }
     }
-    .btn-close {
-        cursor: pointer;
-        height: 30px;
-        position: absolute;
-        right: 16px;
-        top: 24px;
-        width: 30px;
+  }
+
+  .info {
+    bottom: 20%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    p {
+      font-size: $font-size--small;
+      font-weight: $font-weight--medium;
+      margin: 0;
     }
+
+    .icon-holder {
+      margin-bottom: $spacing-sm;
+
+      a {
+        stroke: none;
+        text-decoration: none;
+      }
+      svg {
+        display: inline-block;
+        font-size: em(36px);
+      }
+    }
+
+    // workaround for landscape phone EDIT: what?
+    @media (max-width: 767px) and (orientation: landscape) {
+      display: none;
+    }
+  }
+  .btn-close {
+    cursor: pointer;
+    height: 30px;
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    width: 30px;
+  }
 }
 .side-nav.open {
-    left: 0px;
+  left: 0px;
 }

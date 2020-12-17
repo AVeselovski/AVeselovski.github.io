@@ -3,103 +3,103 @@
 // ======================================
 
 .landing {
-    @include basic-layout;
+  @include basic-layout;
 
-    .landing-container-mobile {
-        h1 {
-            font-size: em(40px);
-            font-weight: $font-weight--thin;
-            margin-bottom: $spacing-lg;
-            text-align: right;
-        }
-
-        hr {
-            border-top: 2px solid $grey;
-            margin-bottom: $spacing-lg;
-        }
-
-        &__box {
-            color: inherit;
-            cursor: pointer;
-            display: block;
-            margin-bottom: $spacing-md;
-            text-decoration: none;
-            transition: padding $transition;
-            width: auto;
-
-            h2 {
-                font-size: em(22px);
-            }
-            p {
-                font-size: $font-size--small;
-            }
-
-            &:hover {
-                padding-left: $spacing-sm;
-            }
-
-            &--disabled {
-                color: $grey !important;
-                pointer-events: none;
-
-                h2 {
-                    font-size: em(22px);
-                }
-                p {
-                    font-size: $font-size--small;
-                }
-            }
-        }
+  .landing-container-mobile {
+    h1 {
+      font-size: em(40px);
+      font-weight: $font-weight--thin;
+      margin-bottom: $spacing-lg;
+      text-align: right;
     }
 
-    .landing-container-desktop {
-        max-width: 992px;
-
-        h1 {
-            color: $darkGrey;
-            font-size: $font-size--big;
-            font-weight: $font-weight--thin;
-            margin-bottom: $spacing-lg;
-            text-align: right;
-        }
-
-        hr {
-            border-top: 2px solid $grey;
-            margin-bottom: $spacing-lg;
-        }
-
-        &__box {
-            color: inherit;
-            cursor: pointer;
-            display: block;
-            margin-bottom: $spacing-md;
-            text-decoration: none;
-            transition: padding $transition;
-            width: auto;
-
-            h2 {
-                color: $darkGrey;
-                font-size: $font-size--1;
-            }
-            p {
-                font-size: $font-size--3;
-            }
-
-            &:hover {
-                padding-left: $spacing-sm;
-            }
-
-            &--disabled {
-                color: $grey !important;
-                pointer-events: none;
-
-                h2 {
-                    font-size: $font-size--1;
-                }
-                p {
-                    font-size: $font-size--3;
-                }
-            }
-        }
+    hr {
+      border-top: 2px solid $grey;
+      margin-bottom: $spacing-lg;
     }
+
+    &__box {
+      color: inherit;
+      cursor: pointer;
+      display: block;
+      margin-bottom: $spacing-md;
+      text-decoration: none;
+      transition: padding $transition;
+      width: auto;
+
+      h2 {
+        font-size: em(22px);
+      }
+      p {
+        font-size: $font-size--small;
+      }
+
+      &:hover {
+        padding-left: $spacing-sm;
+      }
+
+      &--disabled {
+        color: $grey !important;
+        pointer-events: none;
+
+        h2 {
+          font-size: em(22px);
+        }
+        p {
+          font-size: $font-size--small;
+        }
+      }
+    }
+  }
+
+  .landing-container-desktop {
+    max-width: 992px;
+
+    h1 {
+      color: $darkGrey;
+      font-size: $font-size--big;
+      font-weight: $font-weight--thin;
+      margin-bottom: $spacing-lg;
+      text-align: right;
+    }
+
+    hr {
+      border-top: 2px solid $grey;
+      margin-bottom: $spacing-lg;
+    }
+
+    &__box {
+      color: inherit;
+      cursor: pointer;
+      display: block;
+      margin-bottom: $spacing-md;
+      text-decoration: none;
+      transition: padding $transition;
+      width: auto;
+
+      h2 {
+        color: $darkGrey;
+        font-size: $font-size--1;
+      }
+      p {
+        font-size: $font-size--3;
+      }
+
+      &:hover {
+        padding-left: $spacing-sm;
+      }
+
+      &--disabled {
+        color: $grey !important;
+        pointer-events: none;
+
+        h2 {
+          font-size: $font-size--1;
+        }
+        p {
+          font-size: $font-size--3;
+        }
+      }
+    }
+  }
 }
